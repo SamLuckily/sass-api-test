@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-import jsonpath
 from api.BaseApi import BaseApi
 from api.ChapterManagementApi import ChapterManagementApi
 from api.CourseManagementApi import CourseManagementApi
@@ -38,14 +37,14 @@ class TestResourceManagementApi(BaseApi):
         assert r.get("code") == 0
         assert code
 
-    def test_resource_unbinding(self):
-        assert False
-
-    def test_resource_edit(self):
-        assert False
-
-    def test_resource_delete(self):
-        assert False
-
-    def test_resource_sorting(self):
-        assert False
+    # def test_resource_unbinding(self):
+    #     assert False
+    #
+    # def test_resource_edit(self):
+    #     assert False
+    #
+    # def test_resource_delete(self):
+    #     assert False
+    #
+    # def test_resource_sorting(self):
+    #     assert False

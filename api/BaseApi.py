@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 import jsonpath
 import requests
+from config.SassConfig import SassConfig
 from utils.log_util import logger
 
 
 class BaseApi:
-    base_url = "http://api.boweiedu.test/"
 
     def access_token(self):
         """
@@ -14,22 +14,29 @@ class BaseApi:
         """
         headers = {"Content-Type": "application/json"}
         data = {
-            "login_type": "username",
-            "username": "15830344885",
-            "password": "admin123"
+            "login_type": self.config().login_type,
+            "username": self.config().username,
+            "password": self.config().password
         }
-        url = self.base_url + "v1/user/login"
+        url = self.config().base_url + "v1/user/login"
         r = requests.request("POST", url, headers=headers, json=data)
         token = jsonpath.jsonpath(r.json(), "$..token")[0]
         uuid = jsonpath.jsonpath(r.json(), "$..user_base.uuid")[0]
         return token, uuid
+
+    def config(self) -> SassConfig:
+        """
+        获取配置
+        :return:
+        """
+        return SassConfig()
 
     def send(self, method, url, **kwargs):
         """
         请求方法
         :return:
         """
-        request_url = self.base_url + url
+        request_url = self.config().base_url + url
         headers = {"Authorization": "Bearer " + self.access_token()[0]}
         logger.info(f"发起的请求地址为===========>{request_url}")
         r = requests.request(method, request_url, headers=headers, **kwargs)
