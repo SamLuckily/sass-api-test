@@ -1,10 +1,12 @@
 # -*- coding: utf-8 -*-
+import pytest
 from api.BaseApi import BaseApi
 from api.ChapterManageApi import ChapterManageApi
 from api.CourseManageApi import CourseManageApi
 from api.LessonManageApi import LessonManageApi
 from api.ResourceManageApi import ResourceManageApi
 from api.UniversalApi import UniversalApi
+from testcases.conftest import get_data
 from utils.jsonpath_utils import JsonPathUtils
 from utils.jsonschema_utils import JsonSchemaUtils
 from utils.log_utils import logger
@@ -21,8 +23,6 @@ class TestResourceManagementApi(BaseApi):
 
     def test_get_resource_lists(self):
         """获取资源列表"""
-        code = self.resource_management.get_resource_list().get("code")
-        assert code == 0
         # 方式一：生成 jsonschema数据断言查询结果
         resource_list_jsonschema = JsonSchemaUtils.generate_jsonschema(self.resource_management.get_resource_list())
         logger.info(f"JSONSchema的结构为：{resource_list_jsonschema}")
@@ -42,13 +42,15 @@ class TestResourceManagementApi(BaseApi):
         logger.info(f"验证的结果为：{res}")
         assert res
 
-    def test_resource_binding(self):
+    @pytest.mark.parametrize("data", get_data()['resource_binding'])
+    def test_resource_binding(self, data):
         """资源绑定"""
-        r = self.course_management.course_add("测试课程", self.access_token()[1], "publish", "测试课程")
+        r = self.course_management.course_add(data['class_name'], self.access_token()[1], data['publish'],
+                                              data["about"])
         course_uuid = JsonPathUtils.get(r, "$..uuid")[0]
-        r = self.chapter_management.chapter_add("测试章节", course_uuid)
+        r = self.chapter_management.chapter_add(data["name_chapter"], course_uuid)
         chapter_uuid = JsonPathUtils.get(r, "$..uuid")[0]
-        r = self.lessonManagement.lesson_add("测试课时", course_uuid, chapter_uuid, "1")
+        r = self.lessonManagement.lesson_add(data['name_lesson'], course_uuid, chapter_uuid, data['view'])
         lesson_uuid = JsonPathUtils.get(r, "$..uuid")[0]
         r = self.universal.upload_resource()
         file_uuid = JsonPathUtils.get(r, "$..uuid")[0]

@@ -1,0 +1,10 @@
+resource_binding:
+  - name: 资源绑定
+    class_name: 测试课程名称
+    publish: publish
+    about: 测试课程描述
+    name_chapter: 测试章节名称
+    name_lesson: 测试课时名称
+    view: 10
+
+
