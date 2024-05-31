@@ -2,8 +2,6 @@
 import os
 import yaml
 
-from utils.log_utils import logger
-
 
 class Utils:
 

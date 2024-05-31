@@ -2,13 +2,16 @@
 import os
 import yaml
 
+from utils.read_utils import Utils
+
 
 class SassConfig:
     def __init__(self):
         # 从环境变量去获取切换的环境信息
         file_path = os.getenv("env", default="test")
         # 拼接文件名
-        file_path = "../config/" + file_path + ".yaml"
+        path = Utils.get_root_path()
+        file_path = f"{path}/config/" + file_path + ".yaml"
         # 读取对应的文件
         with open(file_path, "r", encoding="utf-8") as f:
             self.config = yaml.safe_load(f)

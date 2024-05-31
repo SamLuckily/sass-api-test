@@ -6,6 +6,9 @@ from api.LessonManageApi import LessonManageApi
 from api.ResourceManageApi import ResourceManageApi
 from api.UniversalApi import UniversalApi
 from utils.jsonpath_utils import JsonPathUtils
+from utils.jsonschema_utils import JsonSchemaUtils
+from utils.log_utils import logger
+from utils.read_utils import Utils
 
 
 class TestResourceManagementApi(BaseApi):
@@ -16,10 +19,28 @@ class TestResourceManagementApi(BaseApi):
         self.lessonManagement = LessonManageApi()
         self.universal = UniversalApi()
 
-    def test_get_resource_list(self):
+    def test_get_resource_lists(self):
         """获取资源列表"""
         code = self.resource_management.get_resource_list().get("code")
         assert code == 0
+        # 方式一：生成 jsonschema数据断言查询结果
+        resource_list_jsonschema = JsonSchemaUtils.generate_jsonschema(self.resource_management.get_resource_list())
+        logger.info(f"JSONSchema的结构为：{resource_list_jsonschema}")
+        # 通过 schema 验证数据
+        res = JsonSchemaUtils.validate_schema(self.resource_management.get_resource_list(), resource_list_jsonschema)
+        logger.info(f"验证的结果为：{res}")
+        assert res
+
+    def test_get_resource_list(self):
+        """获取资源列表"""
+        # 方式二：使用jsonschema文件断言查询结果
+        file_path = f"{Utils.get_root_path()}/data/resource_list.json"
+        # 生成 schema 数据保存到文件中
+        JsonSchemaUtils.generate_jsonschema_by_file(self.resource_management.get_resource_list(), file_path)
+        # 通过文件验证数据
+        res = JsonSchemaUtils.validate_schema_by_file(self.resource_management.get_resource_list(), file_path)
+        logger.info(f"验证的结果为：{res}")
+        assert res
 
     def test_resource_binding(self):
         """资源绑定"""

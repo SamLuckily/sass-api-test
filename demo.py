@@ -1,85 +1,86 @@
-# -*- coding: utf-8 -*-
-import time
-import jsonpath
-import requests
-from config.SassConfig import SassConfig
-from utils.log_utils import logger
-from utils.read_utils import Utils, utils_instance
+# # -*- coding: utf-8 -*-
+# import time
+# import jsonpath
+# import requests
+# from config.SassConfig import SassConfig
+# from utils.log_utils import logger
+# from utils.read_utils import Utils, utils_instance
+#
+#
+# class BaseApi:
+#
+#     def access_token(self):
+#         """
+#         获取token
+#         问题：每次请求，都需要调用获取token,重复获取token。浪费资源
+#         解决方案：获取token之前添加判断，如果token存在于对象中的话则不获取token
+#         :return:
+#         """
+#         headers = {"Content-Type": "application/json"}
+#         data = {
+#             "login_type": self.config().login_type,
+#             "username": self.config().username,
+#             "password": self.config().password
+#         }
+#         url = self.config().base_url + "v1/user/login"
+#         r = requests.request("POST", url, headers=headers, json=data)
+#         token = jsonpath.jsonpath(r.json(), "$..token")[0]
+#         uuid = jsonpath.jsonpath(r.json(), "$..user_base.uuid")[0]
+#         timestamp = jsonpath.jsonpath(r.json(), "$.timestamp")[0]
+#         # path = utils_instance.get_root_path()
+#         # Utils.add_yaml_data(f'{path}/data/token.yaml',
+#         #                     {"access_token": token, "uuid": uuid, "timestamp": timestamp})
+#         return token, uuid, timestamp
+#
+#     def get_token_by_file(self, key):
+#         """
+#         从文件读取配置信息
+#         :param key:
+#         :return:
+#         """
+#         # 拿到存放token的文件路径
+#         path = utils_instance.get_root_path()
+#         file_path = f'{path}/data/token.yaml'
+#         try:
+#             token_data = Utils.get_yaml_data(file_path).get(key, {})
+#             time_stamp = token_data.get('time_stamp')
+#             access_token = token_data.get('access_token')
+#             # uuid = token_data.get('uuid')
+#         except Exception as e:
+#             logger.info(f"读取token文件失败，错误信息为：{e}")
+#             return e
+#         # 获取时间差
+#         time_step = time.time() - time_stamp
+#         # 判断token是否存在 以及时间戳是否过期
+#         if access_token is None or time_step >= 7200:
+#             new_token = self.access_token()
+#             # 写入新数据
+#             token_data.update({"time_stamp": int(time.time()), "access_token": new_token})
+#             Utils.add_yaml_data({key: token_data}, file_path)
+#             # 返回新的token
+#             return new_token
+#         else:
+#             # 返回已有token
+#             return access_token
+#
+#     def config(self) -> SassConfig:
+#         """
+#         获取配置
+#         :return:
+#         """
+#         return SassConfig()
+#
+#     def send(self, method, url, **kwargs):
+#         """
+#         请求方法
+#         :return:
+#         """
+#         request_url = self.config().base_url + url
+#         # headers = {"Authorization": "Bearer " + self.access_token()[0]}
+#         headers = {"Authorization": "Bearer " + self.get_token_by_file("contacts")}
+#         logger.info(f"发起的请求地址为===========>{request_url}")
+#         r = requests.request(method, request_url, headers=headers, **kwargs)
+#         logger.info(f"接口的响应信息为<==========={r.text}")
+#         # 如果所有的接口都可以进行json序列化的话，就直接return r.json()即可
+#         return r.json()
 
-
-class BaseApi:
-
-    def access_token(self):
-        """
-        获取token
-        问题：每次请求，都需要调用获取token,重复获取token。浪费资源
-        解决方案：获取token之前添加判断，如果token存在于对象中的话则不获取token
-        :return:
-        """
-        headers = {"Content-Type": "application/json"}
-        data = {
-            "login_type": self.config().login_type,
-            "username": self.config().username,
-            "password": self.config().password
-        }
-        url = self.config().base_url + "v1/user/login"
-        r = requests.request("POST", url, headers=headers, json=data)
-        token = jsonpath.jsonpath(r.json(), "$..token")[0]
-        uuid = jsonpath.jsonpath(r.json(), "$..user_base.uuid")[0]
-        timestamp = jsonpath.jsonpath(r.json(), "$.timestamp")[0]
-        # path = utils_instance.get_root_path()
-        # Utils.add_yaml_data(f'{path}/data/token.yaml',
-        #                     {"access_token": token, "uuid": uuid, "timestamp": timestamp})
-        return token, uuid, timestamp
-
-    def get_token_by_file(self, key):
-        """
-        从文件读取配置信息
-        :param key:
-        :return:
-        """
-        # 拿到存放token的文件路径
-        path = utils_instance.get_root_path()
-        file_path = f'{path}/data/token.yaml'
-        try:
-            token_data = Utils.get_yaml_data(file_path).get(key, {})
-            time_stamp = token_data.get('time_stamp')
-            access_token = token_data.get('access_token')
-            # uuid = token_data.get('uuid')
-        except Exception as e:
-            logger.info(f"读取token文件失败，错误信息为：{e}")
-            return e
-        # 获取时间差
-        time_step = time.time() - time_stamp
-        # 判断token是否存在 以及时间戳是否过期
-        if access_token is None or time_step >= 7200:
-            new_token = self.access_token()
-            # 写入新数据
-            token_data.update({"time_stamp": int(time.time()), "access_token": new_token})
-            Utils.add_yaml_data({key: token_data}, file_path)
-            # 返回新的token
-            return new_token
-        else:
-            # 返回已有token
-            return access_token
-
-    def config(self) -> SassConfig:
-        """
-        获取配置
-        :return:
-        """
-        return SassConfig()
-
-    def send(self, method, url, **kwargs):
-        """
-        请求方法
-        :return:
-        """
-        request_url = self.config().base_url + url
-        # headers = {"Authorization": "Bearer " + self.access_token()[0]}
-        headers = {"Authorization": "Bearer " + self.get_token_by_file("contacts")}
-        logger.info(f"发起的请求地址为===========>{request_url}")
-        r = requests.request(method, request_url, headers=headers, **kwargs)
-        logger.info(f"接口的响应信息为<==========={r.text}")
-        # 如果所有的接口都可以进行json序列化的话，就直接return r.json()即可
-        return r.json()
