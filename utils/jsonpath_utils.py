@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import jsonpath
 
-from utils.log_util import logger
+from utils.log_utils import logger
 
 
 class JsonPathUtils:

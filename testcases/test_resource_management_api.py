@@ -34,17 +34,18 @@ class TestResourceManagementApi(BaseApi):
         self.resource_management.resource_binding("course_lesson", lesson_uuid, file_uuid)
         self.course_management.course_delete(course_uuid)
         code = JsonPathUtils.get(r, "$..code")
+        # 断言
         assert r.get("code") == 0
-        assert code
+        assert len(code) == 1 and code[0] == 0
 
-    # def test_resource_unbinding(self):
-    #     assert False
-    #
-    # def test_resource_edit(self):
-    #     assert False
-    #
-    # def test_resource_delete(self):
-    #     assert False
-    #
-    # def test_resource_sorting(self):
-    #     assert False
+    def test_resource_unbinding(self):
+        assert False
+
+    def test_resource_edit(self):
+        assert False
+
+    def test_resource_delete(self):
+        assert False
+
+    def test_resource_sorting(self):
+        assert False

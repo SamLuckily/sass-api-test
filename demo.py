@@ -27,6 +27,9 @@ class BaseApi:
         token = jsonpath.jsonpath(r.json(), "$..token")[0]
         uuid = jsonpath.jsonpath(r.json(), "$..user_base.uuid")[0]
         timestamp = jsonpath.jsonpath(r.json(), "$.timestamp")[0]
+        # path = utils_instance.get_root_path()
+        # Utils.add_yaml_data(f'{path}/data/token.yaml',
+        #                     {"access_token": token, "uuid": uuid, "timestamp": timestamp})
         return token, uuid, timestamp
 
     def get_token_by_file(self, key):
@@ -42,27 +45,23 @@ class BaseApi:
             token_data = Utils.get_yaml_data(file_path).get(key, {})
             time_stamp = token_data.get('time_stamp')
             access_token = token_data.get('access_token')
-            uuid = token_data.get('uuid')
-            # 获取时间差对 time_stamp 的检查，如果 time_stamp 不存在（即文件为空或 key 下没有 time_stamp），则默认其已过期
-            time_step = time.time() - time_stamp if time_stamp else float('inf')
-            # 判断token是否存在 以及时间戳是否过期
-            if access_token is None or time_step >= 7200:
-                new_token, new_uuid, new_timestamp = self.access_token()
-                # 写入新数据
-                new_token_data = {
-                    'time_stamp': int(new_timestamp),
-                    'access_token': new_token,
-                    'uuid': new_uuid
-                }
-                Utils.add_yaml_data({key: new_token_data}, file_path)
-                # 返回新的token
-                return new_token
-            else:
-                # 返回已有token
-                return access_token
+            # uuid = token_data.get('uuid')
         except Exception as e:
-            logger.info(f"读取token文件失败或处理token时出错，错误信息为：{e}")
+            logger.info(f"读取token文件失败，错误信息为：{e}")
             return e
+        # 获取时间差
+        time_step = time.time() - time_stamp
+        # 判断token是否存在 以及时间戳是否过期
+        if access_token is None or time_step >= 7200:
+            new_token = self.access_token()
+            # 写入新数据
+            token_data.update({"time_stamp": int(time.time()), "access_token": new_token})
+            Utils.add_yaml_data({key: token_data}, file_path)
+            # 返回新的token
+            return new_token
+        else:
+            # 返回已有token
+            return access_token
 
     def config(self) -> SassConfig:
         """
@@ -77,6 +76,7 @@ class BaseApi:
         :return:
         """
         request_url = self.config().base_url + url
+        # headers = {"Authorization": "Bearer " + self.access_token()[0]}
         headers = {"Authorization": "Bearer " + self.get_token_by_file("contacts")}
         logger.info(f"发起的请求地址为===========>{request_url}")
         r = requests.request(method, request_url, headers=headers, **kwargs)
