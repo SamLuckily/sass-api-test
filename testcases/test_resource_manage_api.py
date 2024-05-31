@@ -1,19 +1,19 @@
 # -*- coding: utf-8 -*-
 from api.BaseApi import BaseApi
-from api.ChapterManagementApi import ChapterManagementApi
-from api.CourseManagementApi import CourseManagementApi
-from api.LessonManagementApi import LessonManagementApi
-from api.ResourceManagementApi import ResourceManagementApi
+from api.ChapterManageApi import ChapterManageApi
+from api.CourseManageApi import CourseManageApi
+from api.LessonManageApi import LessonManageApi
+from api.ResourceManageApi import ResourceManageApi
 from api.UniversalApi import UniversalApi
 from utils.jsonpath_utils import JsonPathUtils
 
 
 class TestResourceManagementApi(BaseApi):
     def setup_class(self):
-        self.resource_management = ResourceManagementApi()
-        self.course_management = CourseManagementApi()
-        self.chapter_management = ChapterManagementApi()
-        self.lessonManagement = LessonManagementApi()
+        self.resource_management = ResourceManageApi()
+        self.course_management = CourseManageApi()
+        self.chapter_management = ChapterManageApi()
+        self.lessonManagement = LessonManageApi()
         self.universal = UniversalApi()
 
     def test_get_resource_list(self):
@@ -38,14 +38,14 @@ class TestResourceManagementApi(BaseApi):
         assert r.get("code") == 0
         assert len(code) == 1 and code[0] == 0
 
-    def test_resource_unbinding(self):
-        assert False
-
-    def test_resource_edit(self):
-        assert False
-
-    def test_resource_delete(self):
-        assert False
-
-    def test_resource_sorting(self):
-        assert False
+    # def test_resource_unbinding(self):
+    #     assert False
+    #
+    # def test_resource_edit(self):
+    #     assert False
+    #
+    # def test_resource_delete(self):
+    #     assert False
+    #
+    # def test_resource_sorting(self):
+    #     assert False

@@ -4,7 +4,7 @@ import jsonpath
 import requests
 from config.SassConfig import SassConfig
 from utils.log_utils import logger
-from utils.read_utils import Utils, utils_instance
+from utils.read_utils import Utils
 
 
 class BaseApi:
@@ -36,13 +36,12 @@ class BaseApi:
         :return:
         """
         # 拿到存放token的文件路径
-        path = utils_instance.get_root_path()
+        path = Utils.get_root_path()
         file_path = f'{path}/data/token.yaml'
         try:
             token_data = Utils.get_yaml_data(file_path).get(key, {})
             time_stamp = token_data.get('time_stamp')
             access_token = token_data.get('access_token')
-            uuid = token_data.get('uuid')
             # 获取时间差对 time_stamp 的检查，如果 time_stamp 不存在（即文件为空或 key 下没有 time_stamp），则默认其已过期
             time_step = time.time() - time_stamp if time_stamp else float('inf')
             # 判断token是否存在 以及时间戳是否过期

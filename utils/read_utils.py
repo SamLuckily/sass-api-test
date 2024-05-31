@@ -2,6 +2,8 @@
 import os
 import yaml
 
+from utils.log_utils import logger
+
 
 class Utils:
 
@@ -12,7 +14,6 @@ class Utils:
         :return:
         """
         path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-        # logger.info(path)
         return path
 
     @classmethod
@@ -35,7 +36,3 @@ class Utils:
         """
         with open(file_path, 'w', encoding='utf-8') as f:
             yaml.dump(data, f)
-
-
-# # 实例化 Utils 类
-utils_instance = Utils()

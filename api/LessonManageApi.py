@@ -2,7 +2,7 @@
 from api.BaseApi import BaseApi
 
 
-class LessonManagementApi(BaseApi):
+class LessonManageApi(BaseApi):
     def lesson_add(self, name, course_uuid, chapter_uuid, view):
         path = "backend/lesson/add"
         data = {

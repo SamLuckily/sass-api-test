@@ -2,7 +2,7 @@
 from api.BaseApi import BaseApi
 
 
-class ChapterManagementApi(BaseApi):
+class ChapterManageApi(BaseApi):
     def chapter_add(self, title, course_uuid):
         path = "backend/chapter/add"
         data = {

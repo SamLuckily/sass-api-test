@@ -2,7 +2,7 @@
 from api.BaseApi import BaseApi
 
 
-class ResourceManagementApi(BaseApi):
+class ResourceManageApi(BaseApi):
     def get_resource_list(self):
         """资源列表"""
         path = "backend/resource/list"
