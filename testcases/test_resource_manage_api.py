@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
-import time
-
+import allure
 import pytest
 from api.BaseApi import BaseApi
 from api.ChapterManageApi import ChapterManageApi
@@ -15,6 +14,7 @@ from utils.log_utils import logger
 from utils.read_utils import Utils
 
 
+@allure.feature("资源管理模块")
 class TestResourceManagementApi(BaseApi):
     def setup_class(self):
         self.resource_management = ResourceManageApi()
@@ -23,8 +23,11 @@ class TestResourceManagementApi(BaseApi):
         self.lessonManagement = LessonManageApi()
         self.universal = UniversalApi()
 
+    @allure.story("获取资源列表测试用例")
+    @allure.title("获取资源列表")
+    @allure.severity('normal')
+    @allure.description("获取资源列表")
     def test_get_resource_lists(self):
-        """获取资源列表"""
         # 方式一：生成 jsonschema数据断言查询结果
         resource_list_jsonschema = JsonSchemaUtils.generate_jsonschema(self.resource_management.get_resource_list())
         logger.info(f"JSONSchema的结构为：{resource_list_jsonschema}")
@@ -33,8 +36,11 @@ class TestResourceManagementApi(BaseApi):
         logger.info(f"验证的结果为：{res}")
         assert res
 
+    @allure.story("获取资源列表测试用例")
+    @allure.title("获取资源列表")
+    @allure.severity('normal')
+    @allure.description("获取资源列表")
     def test_get_resource_list(self):
-        """获取资源列表"""
         # 方式二：使用jsonschema文件断言查询结果
         file_path = f"{Utils.get_root_path()}/data/resource_list.json"
         # 生成 schema 数据保存到文件中
@@ -44,9 +50,12 @@ class TestResourceManagementApi(BaseApi):
         logger.info(f"验证的结果为：{res}")
         assert res
 
+    @allure.story("资源绑定测试用例")
+    @allure.title("资源绑定")
+    @allure.severity('normal')
+    @allure.description("资源绑定")
     @pytest.mark.parametrize("data", get_data()['resource_binding'])
     def test_resource_binding(self, data):
-        """资源绑定"""
         r = self.course_management.course_add(data['class_name'], self.access_token()[1], data['publish'],
                                               data["about"])
         course_uuid = JsonPathUtils.get(r, "$..uuid")[0]
@@ -63,9 +72,12 @@ class TestResourceManagementApi(BaseApi):
         assert r.get("code") == 0
         assert len(code) == 1 and code[0] == 0
 
+    @allure.story("资源解除绑定测试用例")
+    @allure.title("资源解除绑定")
+    @allure.severity('normal')
+    @allure.description("资源解除绑定")
     @pytest.mark.parametrize("data", get_data()['resource_unbinding'])
     def test_resource_unbinding(self, data):
-        """资源解除绑定"""
         r = self.course_management.course_add(data['class_name'], self.access_token()[1], data['publish'],
                                               data["about"])
         course_uuid = JsonPathUtils.get(r, "$..uuid")[0]
@@ -83,6 +95,10 @@ class TestResourceManagementApi(BaseApi):
         assert r.get("code") == 0
         assert len(code) == 1 and code[0] == 0
 
+    @allure.story("资源编辑测试用例")
+    @allure.title("资源编辑")
+    @allure.severity('normal')
+    @allure.description("资源编辑")
     @pytest.mark.parametrize("data", get_data()['resource_edit'])
     def test_resource_edit(self, data):
         """资源编辑"""
@@ -103,6 +119,10 @@ class TestResourceManagementApi(BaseApi):
         assert r.get("code") == 0
         assert len(code) == 1 and code[0] == 0
 
+    @allure.story("资源删除测试用例")
+    @allure.title("资源删除")
+    @allure.severity('normal')
+    @allure.description("资源删除")
     @pytest.mark.parametrize("data", get_data()['resource_delete'])
     def test_resource_delete(self, data):
         r = self.course_management.course_add(data['class_name'], self.access_token()[1], data['publish'],
@@ -123,6 +143,10 @@ class TestResourceManagementApi(BaseApi):
         assert r.get("code") == 0
         assert len(code) == 1 and code[0] == 0
 
+    @allure.story("资源排序测试用例")
+    @allure.title("资源排序")
+    @allure.severity('normal')
+    @allure.description("资源排序")
     @pytest.mark.parametrize("data", get_data()['resource_sort'])
     def test_resource_sorting(self, data):
         r = self.course_management.course_add(data['class_name'], self.access_token()[1], data['publish'],
