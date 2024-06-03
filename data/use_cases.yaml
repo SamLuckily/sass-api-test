@@ -6,5 +6,38 @@ resource_binding:
     name_chapter: 测试章节名称
     name_lesson: 测试课时名称
     view: 10
-
+resource_unbinding:
+  - name: 资源解除绑定
+    class_name: 测试课程名称
+    publish: publish
+    about: 测试课程描述
+    name_chapter: 测试章节名称
+    name_lesson: 测试课时名称
+    view: 10
+resource_edit:
+  - name: 资源编辑
+    class_name: 测试课程名称
+    publish: publish
+    about: 测试课程描述
+    name_chapter: 测试章节名称
+    name_lesson: 测试课时名称
+    view: 10
+    file_name: 名称编辑
+resource_delete:
+  - name: 资源删除
+    class_name: 测试课程名称
+    publish: publish
+    about: 测试课程描述
+    name_chapter: 测试章节名称
+    name_lesson: 测试课时名称
+    view: 10
+resource_sort:
+  - name: 资源排序
+    class_name: 测试课程资源
+    publish: publish
+    about: 测试课程资源描述
+    name_chapter: 测试章节资源名称
+    name_lesson: 测试课时资源名称
+    view: 10
+    sort: down
 

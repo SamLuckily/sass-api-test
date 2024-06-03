@@ -31,8 +31,13 @@ class CourseManageApi(BaseApi):
     def course_list(self):
         pass
 
-    def course_details(self):
-        pass
+    def course_details(self, uuid):
+        """课程详情"""
+        path = "backend/course/detail"
+        data = {
+            "uuid": uuid
+        }
+        return self.send("get", path, params=data)
 
     def get_teacher(self):
         pass

@@ -29,6 +29,13 @@ class BaseApi:
         timestamp = jsonpath.jsonpath(r.json(), "$.timestamp")[0]
         return token, uuid, timestamp
 
+    def config(self) -> SassConfig:
+        """
+        获取配置
+        :return:
+        """
+        return SassConfig()
+
     def get_token_by_file(self, key):
         """
         从文件读取配置信息
@@ -62,13 +69,6 @@ class BaseApi:
         except Exception as e:
             logger.info(f"读取token文件失败或处理token时出错，错误信息为：{e}")
             return e
-
-    def config(self) -> SassConfig:
-        """
-        获取配置
-        :return:
-        """
-        return SassConfig()
 
     def send(self, method, url, **kwargs):
         """
