@@ -1,0 +1,17 @@
+INFO     utils.log_utils:BaseApi.py:82 发起的请求地址为===========>https://papi.boweiedu.com/backend/course/add
+INFO     utils.log_utils:BaseApi.py:84 接口的响应信息为<==========={"code":0,"msg":"success","data":{"uuid":"17105bd3c12c5c7125512b8d33257644"},"timestamp":1718108922,"req_id":"5583954af6f2d7173f1430222283b503"}
+INFO     utils.log_utils:jsonpath_utils.py:11 通过jsonpath获取到的数据为['17105bd3c12c5c7125512b8d33257644']
+INFO     utils.log_utils:BaseApi.py:82 发起的请求地址为===========>https://papi.boweiedu.com/backend/chapter/add
+INFO     utils.log_utils:BaseApi.py:84 接口的响应信息为<==========={"code":0,"msg":"success","data":{"uuid":"41d2d3c234c72b67ed196e1f7bc5197a"},"timestamp":1718108922,"req_id":"22c2c453f6f2d717401430221426f774"}
+INFO     utils.log_utils:jsonpath_utils.py:11 通过jsonpath获取到的数据为['41d2d3c234c72b67ed196e1f7bc5197a']
+INFO     utils.log_utils:BaseApi.py:82 发起的请求地址为===========>https://papi.boweiedu.com/backend/lesson/add
+INFO     utils.log_utils:BaseApi.py:84 接口的响应信息为<==========={"code":0,"msg":"success","data":{"uuid":"0333f3e830527f304cdb0bdbb22ac253"},"timestamp":1718108922,"req_id":"04e96c59f6f2d717411430228c85ce16"}
+INFO     utils.log_utils:jsonpath_utils.py:11 通过jsonpath获取到的数据为['0333f3e830527f304cdb0bdbb22ac253']
+INFO     utils.log_utils:BaseApi.py:82 发起的请求地址为===========>https://papi.boweiedu.com/comm/upload
+INFO     utils.log_utils:BaseApi.py:84 接口的响应信息为<==========={"code":0,"msg":"success","data":{"uuid":"9f0bf774b157211d06cdc0e8f5455411","filepath":"https://pstatic.boweiedu.com/resource/static/0000000000/2024/06/d1x6s753ec8ir6szp2.jpeg","url":"https://pstatic.boweiedu.com/resource/static/0000000000/2024/06/d1x6s753ec8ir6szp2.jpeg"},"timestamp":1718108923,"req_id":"d65f4e7ef6f2d717421430222c7e3747"}
+INFO     utils.log_utils:jsonpath_utils.py:11 通过jsonpath获取到的数据为['9f0bf774b157211d06cdc0e8f5455411']
+INFO     utils.log_utils:BaseApi.py:82 发起的请求地址为===========>https://papi.boweiedu.com/backend/resource/bind
+INFO     utils.log_utils:BaseApi.py:84 接口的响应信息为<==========={"code":0,"msg":"success","data":[],"timestamp":1718108923,"req_id":"64941484f6f2d7174314302221ac9096"}
+INFO     utils.log_utils:BaseApi.py:82 发起的请求地址为===========>https://papi.boweiedu.com/backend/course/delete
+INFO     utils.log_utils:BaseApi.py:84 接口的响应信息为<==========={"code":0,"msg":"success","data":[],"timestamp":1718108923,"req_id":"e6f80089f6f2d71744143022cee29684"}
+INFO     utils.log_utils:jsonpath_utils.py:11 通过jsonpath获取到的数据为[0]
