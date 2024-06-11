@@ -13,6 +13,7 @@ class TestLogin:
             "password": "admin123"
         }
         url = "http://api.boweiedu.test/v1/user/login"
+        # url = "http://192.168.0.210/v1/user/login"
         r = requests.request("POST", url, headers=headers, json=data)
         self.token = jsonpath.jsonpath(r.json(), "$..token")[0]
         self.uuid = jsonpath.jsonpath(r.json(), "$..user_base.uuid")[0]
