@@ -8,7 +8,7 @@ class UniversalApi(BaseApi):
         files = {
             "upload-file": ("dog.jpeg",
                             # open(r"E:\python_project\own_project\web_ui\sass_apiauto\files\dog.jpeg", "rb"),
-                            open(r"files\dog.jpeg", "rb"),
+                            open(r"files/dog.jpeg", "rb"),
                             "application/octet-stream",
                             )
         }
