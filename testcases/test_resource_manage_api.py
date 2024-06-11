@@ -27,28 +27,36 @@ class TestResourceManagementApi(BaseApi):
     @allure.title("获取资源列表")
     @allure.severity('normal')
     @allure.description("获取资源列表")
-    def test_get_resource_lists(self):
-        # 方式一：生成 jsonschema数据断言查询结果
-        resource_list_jsonschema = JsonSchemaUtils.generate_jsonschema(self.resource_management.get_resource_list())
-        logger.info(f"JSONSchema的结构为：{resource_list_jsonschema}")
-        # 通过 schema 验证数据
-        res = JsonSchemaUtils.validate_schema(self.resource_management.get_resource_list(), resource_list_jsonschema)
-        logger.info(f"验证的结果为：{res}")
-        assert res
+    def test_get_resource_list_first(self):
+        r = self.resource_management.get_resource_list()
+        assert r.get("code") == 0
 
-    @allure.story("获取资源列表测试用例")
-    @allure.title("获取资源列表")
-    @allure.severity('normal')
-    @allure.description("获取资源列表")
-    def test_get_resource_list(self):
-        # 方式二：使用jsonschema文件断言查询结果
-        file_path = f"{Utils.get_root_path()}/data/resource_list.json"
-        # 生成 schema 数据保存到文件中
-        JsonSchemaUtils.generate_jsonschema_by_file(self.resource_management.get_resource_list(), file_path)
-        # 通过文件验证数据
-        res = JsonSchemaUtils.validate_schema_by_file(self.resource_management.get_resource_list(), file_path)
-        logger.info(f"验证的结果为：{res}")
-        assert res
+    # @allure.story("获取资源列表测试用例")
+    # @allure.title("获取资源列表")
+    # @allure.severity('normal')
+    # @allure.description("获取资源列表")
+    # def test_get_resource_lists(self):
+    #     # 方式一：生成 jsonschema数据断言查询结果
+    #     resource_list_jsonschema = JsonSchemaUtils.generate_jsonschema(self.resource_management.get_resource_list())
+    #     logger.info(f"JSONSchema的结构为：{resource_list_jsonschema}")
+    #     # 通过 schema 验证数据
+    #     res = JsonSchemaUtils.validate_schema(self.resource_management.get_resource_list(), resource_list_jsonschema)
+    #     logger.info(f"验证的结果为：{res}")
+    #     assert res
+    #
+    # @allure.story("获取资源列表测试用例")
+    # @allure.title("获取资源列表")
+    # @allure.severity('normal')
+    # @allure.description("获取资源列表")
+    # def test_get_resource_list(self):
+    #     # 方式二：使用jsonschema文件断言查询结果
+    #     file_path = f"{Utils.get_root_path()}/data/resource_list.json"
+    #     # 生成 schema 数据保存到文件中
+    #     JsonSchemaUtils.generate_jsonschema_by_file(self.resource_management.get_resource_list(), file_path)
+    #     # 通过文件验证数据
+    #     res = JsonSchemaUtils.validate_schema_by_file(self.resource_management.get_resource_list(), file_path)
+    #     logger.info(f"验证的结果为：{res}")
+    #     assert res
 
     @allure.story("资源绑定测试用例")
     @allure.title("资源绑定")
