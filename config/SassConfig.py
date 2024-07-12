@@ -8,7 +8,7 @@ from utils.read_utils import Utils
 class SassConfig:
     def __init__(self):
         # 从环境变量去获取切换的环境信息
-        file_path = os.getenv("env", default="test")
+        file_path = os.getenv("env", default="pre")
         # 拼接文件名
         path = Utils.get_root_path()
         file_path = f"{path}/config/" + file_path + ".yaml"

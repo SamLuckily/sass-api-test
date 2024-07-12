@@ -1,7 +1,7 @@
 # 接口自动化测试的基础服务地址抽离
-# base_url: "http://api.boweiedu.test/"
-base_url: "https://papi.boweiedu.com/"
+base_url: "http://api.boweiedu.test/"
 # 用户登录信息
 login_type: "username"
-username: "15830344885"
+username: "15830344889"
 password: "admin123"
+

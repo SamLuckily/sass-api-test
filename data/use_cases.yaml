@@ -40,4 +40,17 @@ resource_sort:
     name_lesson: 测试课时资源名称
     view: 10
     sort: down
+chapter_add:
+  - name: 章节新增
+    class_name: 章节新增课程
+    publish: publish
+    about: 章节新增课程描述
+    name_chapter: 新增章节名称
+chapter_edit:
+  - name: 章节编辑
+    class_name: 章节编辑课程
+    publish: publish
+    about: 章节编辑课程描述
+    name_chapter: 编辑章节名称
+    title: 章节编辑后的名称
 
