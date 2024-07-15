@@ -53,4 +53,25 @@ chapter_edit:
     about: 章节编辑课程描述
     name_chapter: 编辑章节名称
     title: 章节编辑后的名称
+chapter_delete:
+  - name: 章节删除
+    class_name: 章节删除课程
+    publish: publish
+    about: 章节删除课程描述
+    name_chapter: 删除章节名称
+chapter_list:
+  - name: 章节列表
+    class_name: 章节列表课程
+    publish: publish
+    about: 章节列表课程描述
+chapter_sort:
+  - name: 章节排序
+    class_name: 章节排序课程
+    publish: publish
+    about: 章节排序课程描述
+    name_chapter_one: 章节排序名称一
+    name_chapters_two: 章节排序名称二
+    name_chapters_three: 章节排序名称三
+    sort_one: up
+    sort_two: down
 

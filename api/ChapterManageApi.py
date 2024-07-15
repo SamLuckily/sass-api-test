@@ -19,11 +19,25 @@ class ChapterManageApi(BaseApi):
         }
         return self.send("post", path, json=data)
 
-    def chapter_delete(self):
-        pass
+    def chapter_delete(self, uuid):
+        path = "/backend/chapter/delete"
+        data = {
+            "uuid": uuid
+        }
+        return self.send("post", path, json=data)
 
-    def chapter_list(self):
-        pass
+    def chapter_list(self, course_uuid):
+        path = "/backend/chapter/list"
+        data = {
+            "course_uuid": course_uuid
+        }
+        return self.send("get", path, params=data)
 
-    def chapter_sorting(self):
-        pass
+    def chapter_sorting(self, sort, uuid, course_uuid):
+        path = "/backend/chapter/sort"
+        data = {
+            "sort": sort,
+            "uuid": uuid,
+            "course_uuid": course_uuid
+        }
+        return self.send("post", path, json=data)
