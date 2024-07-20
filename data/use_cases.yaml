@@ -74,4 +74,52 @@ chapter_sort:
     name_chapters_three: 章节排序名称三
     sort_one: up
     sort_two: down
-
+course_add:
+  - name: 新增课程
+    class_name: 新增课程
+    publish: publish
+    about: 新增课程描述
+course_on_off:
+  - name: 课程上架
+    class_name: 上架课程
+    publish: publish
+    about: 上架课程描述
+    status: 1
+  - name: 课程下架
+    class_name: 下架课程
+    publish: publish
+    about: 下架课程描述
+    status: 2
+course_edit:
+  - name: 课程编辑
+    class_name: 编辑课程名称
+    publish: publish
+    about: 编辑课程描述
+    name_edit: 编辑后课程名称
+course_delete:
+  - name: 课程删除
+    class_name: 课程删除
+    publish: publish
+    about: 删除课程描述
+course_detail:
+  - name: 课程详情
+    class_name: 课程详情
+    publish: publish
+    about: 课程详情描述
+lesson_add:
+  - name: 新增课时
+    class_name: 新增课时
+    publish: publish
+    about: 新增课时详情描述
+    name_chapter: 新增章节名称
+    name_lesson: 新增课时名称
+    view: 20
+lesson_edit:
+  - name: 课时编辑
+    class_name: 课时编辑
+    publish: publish
+    about: 课时编辑详情描述
+    name_chapter: 新增章节名称
+    name_lesson: 新增课时名称
+    view: 20
+    edit_name_lesson: 编辑课时

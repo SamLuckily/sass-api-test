@@ -78,7 +78,7 @@ class BaseApi:
         request_url = self.config().base_url + url
         headers = {"Authorization": "Bearer " + self.get_token_by_file("contacts")}
         logger.info(f"发起的请求地址为===========>{request_url}")
-        r = requests.request(method, request_url, headers=headers, **kwargs)
+        r = requests.request(method, request_url, headers=headers, timeout=3, **kwargs)  # 添加接口请求超时处理
         logger.info(f"接口的响应信息为<==========={r.text}")
         # 如果所有的接口都可以进行json序列化的话，就直接return r.json()即可
         return r.json()

@@ -14,11 +14,23 @@ class CourseManageApi(BaseApi):
         }
         return self.send("post", path, json=data)
 
-    def course_listing_and_removal(self):
-        pass
+    def course_on_and_off(self, uuid, status):
+        """课程上下架"""
+        path = "backend/course/update-status"
+        data = {
+            "uuid": uuid,
+            "status": status
+        }
+        return self.send("post", path, json=data)
 
-    def course_edit(self):
-        pass
+    def course_edit(self, uuid, name):
+        """课程编辑"""
+        path = "backend/course/edit"
+        data = {
+            "uuid": uuid,
+            "name": name
+        }
+        return self.send("post", path, json=data)
 
     def course_delete(self, uuid):
         """删除课程"""
@@ -29,7 +41,9 @@ class CourseManageApi(BaseApi):
         return self.send("post", path, json=data)
 
     def course_list(self):
-        pass
+        """课程列表"""
+        path = "backend/course/list"
+        return self.send("get", path)
 
     def course_details(self, uuid):
         """课程详情"""
@@ -40,7 +54,11 @@ class CourseManageApi(BaseApi):
         return self.send("get", path, params=data)
 
     def get_teacher(self):
-        pass
+        """获取教师接口"""
+        path = "backend/user/teacher-list"
+        return self.send("get", path)
 
     def get_course_name_list(self):
-        pass
+        """课程名称列表"""
+        path = "backend/course/list-name"
+        return self.send("get", path)
