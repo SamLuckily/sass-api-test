@@ -3,6 +3,9 @@ from api.BaseApi import BaseApi
 
 
 class CourseManageApi(BaseApi):
+    """
+    课程管理
+    """
     def course_add(self, name, teacher_uuid, publish, about):
         """新增课程"""
         path = "backend/course/add"

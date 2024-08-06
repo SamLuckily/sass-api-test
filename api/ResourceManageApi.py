@@ -3,6 +3,9 @@ from api.BaseApi import BaseApi
 
 
 class ResourceManageApi(BaseApi):
+    """
+    资源管理
+    """
     def get_resource_list(self):
         """获取资源列表"""
         path = "backend/resource/list"

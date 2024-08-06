@@ -123,3 +123,8 @@ lesson_edit:
     name_lesson: 新增课时名称
     view: 20
     edit_name_lesson: 编辑课时
+get_user_list:
+  - name: 获取用户列表
+    page: 2
+    size: 10
+

@@ -3,6 +3,9 @@ from api.BaseApi import BaseApi
 
 
 class ChapterManageApi(BaseApi):
+    """
+    章节管理
+    """
     def chapter_add(self, title, course_uuid):
         path = "backend/chapter/add"
         data = {

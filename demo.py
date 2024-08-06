@@ -89,28 +89,40 @@
 # print(result_list)
 # result_list_cleaned = [item.strip() for item in result_list]
 # print(result_list_cleaned)
-from datetime import datetime
+# from datetime import datetime
+#
+#
+# def deact(input_time_str):
+#     # 将输入的时间字符串转换为datetime对象
+#     try:
+#         input_time = datetime.strptime(input_time_str, '%Y-%m-%d %H:%M:%S')
+#     except ValueError:
+#         print("输入的时间格式不正确，请使用'YYYY-MM-DD HH:MM:SS'格式")
+#         return
+#
+#         # 获取当前时间
+#     current_time = datetime.now()
+#
+#     # 比较时间
+#     if input_time > current_time:
+#         print("deact")
+#     else:
+#         print("输入的时间不大于当前时间")
+
+# 示例用法
 
 
-def deact(input_time_str):
-    # 将输入的时间字符串转换为datetime对象
-    try:
-        input_time = datetime.strptime(input_time_str, '%Y-%m-%d %H:%M:%S')
-    except ValueError:
-        print("输入的时间格式不正确，请使用'YYYY-MM-DD HH:MM:SS'格式")
-        return
-
-        # 获取当前时间
-    current_time = datetime.now()
-
-    # 比较时间
-    if input_time > current_time:
-        print("deact")
-    else:
-        print("输入的时间不大于当前时间")
-
-    # 示例用法
-
-
-deact("2024-10-01 12:00:00")  # 假设当前时间小于这个值
+# deact("2024-10-01 12:00:00")  # 假设当前时间小于这个值
 # 如果需要测试当前时间或未来某个时间，请确保你的系统时间设置正确
+
+import requests
+import base64
+import json
+
+
+def test_encode():
+    url = "http://120.79.84.33:9999/demo1.txt"
+    r = requests.get(url=url)
+    # res = base64.b64encode(r.content)
+    res = json.loads(base64.b64decode(r.content))
+    print(res)
