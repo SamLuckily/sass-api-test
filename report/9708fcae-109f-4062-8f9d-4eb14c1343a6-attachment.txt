@@ -1,8 +1,0 @@
-[32mINFO    [0m utils.log_utils:BaseApi.py:80 发起的请求地址为===========>https://papi.boweiedu.com/backend/course/add
-[32mINFO    [0m utils.log_utils:BaseApi.py:82 接口的响应信息为<==========={"code":0,"msg":"success","data":{"uuid":"52c30fb4aa34d3637669ef6ab4027e00"},"timestamp":1722950813,"req_id":"711fa5f2a226e9177a25f21ae2b4f637"}
-[32mINFO    [0m utils.log_utils:jsonpath_utils.py:11 通过jsonpath获取到的数据为['52c30fb4aa34d3637669ef6ab4027e00']
-[32mINFO    [0m utils.log_utils:BaseApi.py:80 发起的请求地址为===========>https://papi.boweiedu.com/backend/course/detail
-[32mINFO    [0m utils.log_utils:BaseApi.py:82 接口的响应信息为<==========={"code":0,"msg":"success","data":{"uuid":"52c30fb4aa34d3637669ef6ab4027e00","static_domain":"","course_name":"课程详情","start_time":0,"end_time":0,"created_at":"2024-08-06 21:26:53","view":0,"publish":"publish","gradeInfo":null,"about":"课程详情描述","is_own":1,"group_introduce":"","id":901,"teacher":{"user_uuid":"2c0326b9ade84619bd2f68bc4bb322c1","nick_name":"sam","avatar":"","real_name":"sam","desc":""},"groups":null,"score_rules":{},"password":""},"timestamp":1722950813,"req_id":"c3e944f6a226e9177b25f21a78d7ca6e"}
-[32mINFO    [0m utils.log_utils:BaseApi.py:80 发起的请求地址为===========>https://papi.boweiedu.com/backend/course/delete
-[32mINFO    [0m utils.log_utils:BaseApi.py:82 接口的响应信息为<==========={"code":0,"msg":"success","data":[],"timestamp":1722950813,"req_id":"489c45faa226e9177c25f21aba4e2ade"}
-[32mINFO    [0m utils.log_utils:jsonpath_utils.py:11 通过jsonpath获取到的数据为[0]
