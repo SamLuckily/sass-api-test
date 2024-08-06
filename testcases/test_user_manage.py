@@ -7,6 +7,7 @@ from api.UserManageApi import UserManageApi
 from testcases.conftest import get_data
 
 
+@allure.feature("用户管理模块")
 class TestUserManageApi(BaseApi):
     def setup_class(self):
         self.user_manage = UserManageApi()
