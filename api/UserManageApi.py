@@ -63,8 +63,8 @@ class UserManageApi(BaseApi):
         path = "backend/user/import-teacher"
         files = {
             "upload-file": ("老师模版.xlsx",
-                            open(r"E:\python_project\own_project\web_ui\sass_apiauto\files\老师模版.xlsx", "rb"),
-                            # open(r"files/dog.jpeg", "rb"),
+                            # open(r"E:\python_project\own_project\web_ui\sass_apiauto\files\老师模版.xlsx", "rb"),
+                            open(r"files/dog.jpeg", "rb"),
                             "application/octet-stream"
                             )
         }
@@ -74,9 +74,9 @@ class UserManageApi(BaseApi):
         """导入学生"""
         path = "backend/user/import-student"
         files = {
-            "upload-file": ("老师模版.xlsx",
-                            open(r"E:\python_project\own_project\web_ui\sass_apiauto\files\学生模版.xlsx", "rb"),
-                            # open(r"files/dog.jpeg", "rb"),
+            "upload-file": ("学生模版.xlsx",
+                            # open(r"E:\python_project\own_project\web_ui\sass_apiauto\files\学生模版.xlsx", "rb"),
+                            open(r"files/学生模版.xlsx", "rb"),
                             "application/octet-stream"
                             )
         }
