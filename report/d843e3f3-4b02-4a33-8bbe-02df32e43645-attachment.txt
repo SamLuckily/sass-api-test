@@ -1,0 +1,8 @@
+[32mINFO    [0m utils.log_utils:BaseApi.py:80 发起的请求地址为===========>http://api.boweiedu.test/backend/course/add
+[32mINFO    [0m utils.log_utils:BaseApi.py:82 接口的响应信息为<==========={"code":0,"msg":"success","data":{"uuid":"26cad7f04a1e77251668bf64d2bd007f"},"timestamp":1723017742,"req_id":"463187008263e9171eb9492386ea2f2b"}
+[32mINFO    [0m utils.log_utils:jsonpath_utils.py:11 通过jsonpath获取到的数据为['26cad7f04a1e77251668bf64d2bd007f']
+[32mINFO    [0m utils.log_utils:BaseApi.py:80 发起的请求地址为===========>http://api.boweiedu.test/backend/course/detail
+[32mINFO    [0m utils.log_utils:BaseApi.py:82 接口的响应信息为<==========={"code":0,"msg":"success","data":{"uuid":"26cad7f04a1e77251668bf64d2bd007f","static_domain":"","course_name":"课程详情","start_time":0,"end_time":0,"created_at":"2024-08-07 16:02:22","view":0,"publish":"publish","gradeInfo":null,"about":"课程详情描述","is_own":1,"group_introduce":"","id":636,"teacher":{"user_uuid":"61cdaa3e7960480f99df634c6ace83b0","nick_name":"Linda","avatar":"","real_name":"Linda","desc":""},"groups":null,"score_rules":{},"password":""},"timestamp":1723017742,"req_id":"dfb465028263e9171fb949238b7eca42"}
+[32mINFO    [0m utils.log_utils:BaseApi.py:80 发起的请求地址为===========>http://api.boweiedu.test/backend/course/delete
+[32mINFO    [0m utils.log_utils:BaseApi.py:82 接口的响应信息为<==========={"code":0,"msg":"success","data":[],"timestamp":1723017742,"req_id":"a3c1c7058263e91720b949239b3453bf"}
+[32mINFO    [0m utils.log_utils:jsonpath_utils.py:11 通过jsonpath获取到的数据为[0]

@@ -1,0 +1,2 @@
+INFO     utils.log_utils:BaseApi.py:80 发起的请求地址为===========>http://api.boweiedu.test/backend/user/import-teacher
+INFO     utils.log_utils:BaseApi.py:82 接口的响应信息为<==========={"code":0,"msg":"success","data":{"success_count":1,"err_count":0,"detail_url":"http://static.boweiedu.test/resource/static/0000000000/2024/08/1723024875.xlsx"},"timestamp":1723024875,"req_id":"3d689bd3fe69e91778bd4923a3d72501"}

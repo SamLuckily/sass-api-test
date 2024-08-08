@@ -1,0 +1,5 @@
+INFO     utils.log_utils:BaseApi.py:80 发起的请求地址为===========>http://api.boweiedu.test/backend/user/import-teacher
+INFO     utils.log_utils:BaseApi.py:82 接口的响应信息为<==========={"code":0,"msg":"success","data":{"success_count":1,"err_count":0,"detail_url":"http://static.boweiedu.test/resource/static/0000000000/2024/08/1723027803.xlsx"},"timestamp":1723027803,"req_id":"6caeba67a86ce917dfbd4923c6f7fa3c"}
+INFO     utils.log_utils:BaseApi.py:80 发起的请求地址为===========>http://api.boweiedu.test/backend/user/import-teacher
+INFO     utils.log_utils:BaseApi.py:82 接口的响应信息为<==========={"code":0,"msg":"success","data":{"success_count":0,"err_count":1,"detail_url":"http://static.boweiedu.test/resource/static/0000000000/2024/08/1723027803.xlsx"},"timestamp":1723027803,"req_id":"074e1a6aa86ce917e0bd4923ee758e04"}
+INFO     utils.log_utils:jsonpath_utils.py:11 通过jsonpath获取到的数据为[1]
