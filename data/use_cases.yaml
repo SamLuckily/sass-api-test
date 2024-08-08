@@ -125,6 +125,54 @@ lesson_edit:
     edit_name_lesson: 编辑课时
 get_user_list:
   - name: 获取用户列表
-    page: 2
+    page: 3
     size: 10
+add_student:
+  - name: 添加学生
+    phone: 13486632105
+    names: 张张
+    pwd: admin123
+add_student_phone:
+  - name: 添加学生输入异常手机号
+    phone: 134866321055
+    names: 张张
+    pwd: admin123
+add_teacher:
+  - name: 添加老师
+    phone: 13486632115
+    names: 胡老师
+    identity: 5
+    pwd: admin123
+edit_user:
+  - name: 编辑用户信息
+    nickname: 刘子编辑
+    phone: 15954854216
+    real_name: 刘子编辑
+    identities: 5
+    gender: 2
+    stu_no: 9658
+edit_user_phone:
+  - name: 编辑用户手机号为异常号码
+    nickname: 刘子编辑
+    phone: 1595485421655
+    real_name: 刘子编辑
+    identities: 5
+    gender: 2
+    stu_no: 9658
+edit_user_identities:
+  - name: 编辑用户角色为不存在角色
+    nickname: 刘子编辑
+    phone: 1595485421655
+    real_name: 刘子编辑
+    identities: 11
+    gender: 2
+    stu_no: 9658
+add_user:
+  - name: 添加用户
+    phone: 15954854216
+    names: 刘子
+    identities: 7
+    pwd: admin123
+
+
 

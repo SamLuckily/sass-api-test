@@ -1,3 +1,0 @@
-INFO     utils.log_utils:BaseApi.py:80 发起的请求地址为===========>https://papi.boweiedu.com//backend/user/add-student
-INFO     utils.log_utils:BaseApi.py:82 接口的响应信息为<==========={"code":-1,"msg":"手机号已注册","data":[],"timestamp":1723003049,"req_id":"750fbeee2456e9170b43f21a12348af3"}
-INFO     utils.log_utils:jsonpath_utils.py:11 通过jsonpath获取到的数据为[-1]

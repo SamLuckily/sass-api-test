@@ -1,2 +1,0 @@
-INFO     utils.log_utils:BaseApi.py:80 发起的请求地址为===========>http://api.boweiedu.test/backend/user/import-teacher
-INFO     utils.log_utils:BaseApi.py:82 接口的响应信息为<==========={"code":10503,"msg":"没有可导入的文件，请上传文件","data":null,"timestamp":1723024333,"req_id":"179f80828069e917e1bc49239bd481e4"}
