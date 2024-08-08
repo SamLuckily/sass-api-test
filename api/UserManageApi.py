@@ -64,7 +64,7 @@ class UserManageApi(BaseApi):
         files = {
             "upload-file": ("老师模版.xlsx",
                             # open(r"E:\python_project\own_project\web_ui\sass_apiauto\files\老师模版.xlsx", "rb"),
-                            open(r"files/dog.jpeg", "rb"),
+                            open(r"files/老师模版.xlsx", "rb"),
                             "application/octet-stream"
                             )
         }
