@@ -1,0 +1,7 @@
+INFO     utils.log_utils:BaseApi.py:80 发起的请求地址为===========>http://api.boweiedu.test/backend/grade/add
+INFO     utils.log_utils:BaseApi.py:82 接口的响应信息为<==========={"code":0,"msg":"success","data":{"uuid":"09a27e3560fe646b55aad59b28891d2c"},"timestamp":1723200273,"req_id":"49f353ee8409ea172bf80c2d3462de2a"}
+INFO     utils.log_utils:jsonpath_utils.py:11 通过jsonpath获取到的数据为['09a27e3560fe646b55aad59b28891d2c']
+INFO     utils.log_utils:BaseApi.py:80 发起的请求地址为===========>http://api.boweiedu.test/backend/grade/user-list
+INFO     utils.log_utils:BaseApi.py:82 接口的响应信息为<==========={"code":0,"msg":"success","data":{"list":[],"pagination":{"size":10,"total":0,"pages":0,"page":1}},"timestamp":1723200273,"req_id":"2baaa7ef8409ea172cf80c2d3392f1bc"}
+INFO     utils.log_utils:BaseApi.py:80 发起的请求地址为===========>http://api.boweiedu.test/backend/grade/delete
+INFO     utils.log_utils:BaseApi.py:82 接口的响应信息为<==========={"code":0,"msg":"success","data":[],"timestamp":1723200274,"req_id":"28bf33f18409ea172df80c2d693ab498"}

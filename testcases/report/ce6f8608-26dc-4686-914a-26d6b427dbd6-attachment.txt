@@ -1,0 +1,12 @@
+INFO     utils.log_utils:BaseApi.py:80 发起的请求地址为===========>http://api.boweiedu.test/backend/grade/add
+INFO     utils.log_utils:BaseApi.py:82 接口的响应信息为<==========={"code":0,"msg":"success","data":{"uuid":"4a90853f53898e92e4e8fba102f58159"},"timestamp":1723197841,"req_id":"9433c9934e07ea17f5f60c2d081e8de8"}
+INFO     utils.log_utils:jsonpath_utils.py:11 通过jsonpath获取到的数据为['4a90853f53898e92e4e8fba102f58159']
+INFO     utils.log_utils:BaseApi.py:80 发起的请求地址为===========>http://api.boweiedu.test/backend/course/add
+INFO     utils.log_utils:BaseApi.py:82 接口的响应信息为<==========={"code":0,"msg":"success","data":{"uuid":"0d0c42884bffcf9b696e7bc0e68d17a6"},"timestamp":1723197841,"req_id":"8f75ca994e07ea17f7f60c2deb089bb9"}
+INFO     utils.log_utils:jsonpath_utils.py:11 通过jsonpath获取到的数据为['0d0c42884bffcf9b696e7bc0e68d17a6']
+INFO     utils.log_utils:BaseApi.py:80 发起的请求地址为===========>http://api.boweiedu.test/backend/grade/course-name
+INFO     utils.log_utils:BaseApi.py:82 接口的响应信息为<==========={"code":0,"msg":"success","data":{"list":[{"course_name":"新增课程一","nickname":"Linda","org_id":null,"path":null,"uuid":"0d0c42884bffcf9b696e7bc0e68d17a6"}],"pagination":{"size":10,"total":1,"pages":0,"page":1}},"timestamp":1723197841,"req_id":"8ee6449c4e07ea17f8f60c2dc2a37d13"}
+INFO     utils.log_utils:BaseApi.py:80 发起的请求地址为===========>http://api.boweiedu.test/backend/course/delete
+INFO     utils.log_utils:BaseApi.py:82 接口的响应信息为<==========={"code":0,"msg":"success","data":[],"timestamp":1723197841,"req_id":"d8d5ff9e4e07ea17f9f60c2ddc72419d"}
+INFO     utils.log_utils:BaseApi.py:80 发起的请求地址为===========>http://api.boweiedu.test/backend/grade/delete
+INFO     utils.log_utils:BaseApi.py:82 接口的响应信息为<==========={"code":0,"msg":"success","data":[],"timestamp":1723197841,"req_id":"5db4d5a54e07ea17fbf60c2d3b7f2140"}
