@@ -173,6 +173,29 @@ add_user:
     names: 刘子
     identities: 7
     pwd: admin123
-
-
+add_class:
+  - describe: 班级新增
+    name: 新增一班
+add_repeat_class:
+  - describe: 新增已经存在的班级
+    add_name: 新增班级
+    add_repeat_class: 新增班级
+edit_class:
+  - describe: 编辑班级
+    add_name: 新增一班
+    edit_name: 编辑班级名称
+course_class_add:
+  - describe: 班级的课程名称列表，添加1个课程
+    class_name: 新增一班
+    course_name: 新增课程一
+    course_names: 编辑课程去掉班级
+    publish: publish
+    about: 新增课程
+add_class_student:
+  - describe: 添加班级学生
+    class_name: 新增一班
+    phone: 15954854216
+    names: 刘子
+    identities: 7
+    pwd: admin123
 

@@ -1,3 +1,0 @@
-INFO     utils.log_utils:BaseApi.py:80 发起的请求地址为===========>http://api.boweiedu.test/backend/grade/add
-INFO     utils.log_utils:BaseApi.py:82 接口的响应信息为<==========={"code":0,"msg":"success","data":{"uuid":"cb4663fdb1de87402a72f1d999c56f7f"},"timestamp":1723196069,"req_id":"e3bdd50eb205ea17a8f40c2d11ceeb61"}
-INFO     utils.log_utils:jsonpath_utils.py:11 通过jsonpath获取到的数据为['cb4663fdb1de87402a72f1d999c56f7f']

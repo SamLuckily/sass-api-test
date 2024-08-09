@@ -1,3 +1,0 @@
-[32mINFO    [0m utils.log_utils:BaseApi.py:80 发起的请求地址为===========>http://api.boweiedu.test/backend/user/add-student
-[32mINFO    [0m utils.log_utils:BaseApi.py:82 接口的响应信息为<==========={"code":51,"msg":"手机格式不正确","data":[],"timestamp":1723203743,"req_id":"b07d8fd8ac0cea1770fc0c2d6ca89393"}
-[32mINFO    [0m utils.log_utils:jsonpath_utils.py:11 通过jsonpath获取到的数据为[51]

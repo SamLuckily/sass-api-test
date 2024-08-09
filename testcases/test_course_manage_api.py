@@ -9,9 +9,6 @@ from api.ResourceManageApi import ResourceManageApi
 from api.UniversalApi import UniversalApi
 from testcases.conftest import get_data
 from utils.jsonpath_utils import JsonPathUtils
-from utils.jsonschema_utils import JsonSchemaUtils
-from utils.log_utils import logger
-from utils.read_utils import Utils
 
 
 @allure.feature("课程管理模块")

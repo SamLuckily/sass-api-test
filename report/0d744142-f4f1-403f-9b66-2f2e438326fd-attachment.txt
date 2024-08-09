@@ -1,0 +1,2 @@
+[32mINFO    [0m utils.log_utils:BaseApi.py:80 发起的请求地址为===========>http://api.boweiedu.test/backend/user/list
+[32mINFO    [0m utils.log_utils:BaseApi.py:82 接口的响应信息为<==========={"code":0,"msg":"success","data":{"list":[],"pagination":{"size":10,"total":12,"pages":2,"page":3}},"timestamp":1723204098,"req_id":"5284a27eff0cea176bfe0c2dd495f215"}

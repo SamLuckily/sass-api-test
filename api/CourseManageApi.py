@@ -6,6 +6,7 @@ class CourseManageApi(BaseApi):
     """
     课程管理
     """
+
     def course_add(self, name, teacher_uuid, publish, about):
         """新增课程"""
         path = "backend/course/add"
@@ -13,7 +14,19 @@ class CourseManageApi(BaseApi):
             "name": name,
             "teacher_uuid": teacher_uuid,
             "publish": publish,
+            "about": about
+        }
+        return self.send("post", path, json=data)
+
+    def course_class_add(self, name, teacher_uuid, publish, about, grade_uuids):
+        """新增包含班级的课程"""
+        path = "backend/course/add"
+        data = {
+            "name": name,
+            "teacher_uuid": teacher_uuid,
+            "publish": publish,
             "about": about,
+            "grade_uuids": grade_uuids
         }
         return self.send("post", path, json=data)
 

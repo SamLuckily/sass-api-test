@@ -1,2 +1,0 @@
-INFO     utils.log_utils:BaseApi.py:80 发起的请求地址为===========>http://api.boweiedu.test/backend/grade/grade-name
-INFO     utils.log_utils:BaseApi.py:82 接口的响应信息为<==========={"code":0,"msg":"success","data":{"list":[{"grade_name":"班级一","uuid":"f4a4a50bbb3fd6e11d90a9bb41289a67"},{"grade_name":"班级2","uuid":"ab2e5be23cce1d603e328f9571ea9896"},{"grade_name":"班级三","uuid":"17d13abce69db0fd7c062c23f09591fe"}]},"timestamp":1723198221,"req_id":"d347f00da707ea17d1f70c2dab43c34d"}
