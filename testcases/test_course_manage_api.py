@@ -72,7 +72,7 @@ class TestCourseManagementApi(BaseApi):
     @allure.severity('normal')
     @allure.description("课程删除")
     @pytest.mark.parametrize("data", get_data()['course_delete'])
-    def test_edit_course(self, data):
+    def test_del_course(self, data):
         r = self.course_management.course_add(data['class_name'], self.access_token()[1], data['publish'],
                                               data["about"])
         course_uuid = JsonPathUtils.get(r, "$..uuid")[0]

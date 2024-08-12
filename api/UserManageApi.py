@@ -135,4 +135,3 @@ class UserManageApi(BaseApi):
         """用户接口信息"""
         path = "backend/user/info"
         return self.send("get", path)
-

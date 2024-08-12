@@ -198,4 +198,35 @@ add_class_student:
     names: 刘子
     identities: 7
     pwd: admin123
+del_class_student:
+  - describe: 删除班级学生
+    class_name: 新增一班
+    phone: 15954854216
+    names: 刘子
+    identities: 7
+    pwd: admin123
+edit_class_student:
+  - describe: 编辑班级学生
+    class_name: 新增一班
+    phone: 15954854216
+    names: 刘子编辑
+    identities: 7
+    pwd: admin123
+    gender: 2
+class_teacher_list:
+  - describe: 班级老师列表
+    class_name: 新增一班
+    phone: 15954854216
+    names: 无忌
+    identities: 7
+class_disassociation_teacher:
+  - describe: 班级取消关联老师
+    phone_one: 15985478458
+    teacher_one: 老师一
+    identities: 5
+    pwd: admin123
+    phone_two: 15864512548
+    teacher_two: 老师二
+    class_name: 冰雕班级
+
 

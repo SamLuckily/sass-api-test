@@ -187,7 +187,7 @@ class TestUserManageApi(BaseApi):
     @allure.severity("normal")
     @allure.description("编辑用户手机号为异常号码")
     @pytest.mark.parametrize("data", get_data()["edit_user_phone"])
-    def test_edit_user(self, data):
+    def test_edit_user_abnormal(self, data):
         self.user_manage.import_student()
         r = self.user_manage.get_user_list_null()
         page = JsonPathUtils.get(r, "$..pagination.pages")
@@ -207,7 +207,7 @@ class TestUserManageApi(BaseApi):
     @allure.severity("normal")
     @allure.description("编辑用户角色为不存在角色")
     @pytest.mark.parametrize("data", get_data()["edit_user_identities"])
-    def test_edit_user(self, data):
+    def test_edit_user_absent(self, data):
         self.user_manage.import_student()
         r = self.user_manage.get_user_list_null()
         page = JsonPathUtils.get(r, "$..pagination.pages")
