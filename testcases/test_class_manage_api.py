@@ -5,7 +5,7 @@ import pytest
 from api.BaseApi import BaseApi
 from api.CourseManageApi import CourseManageApi
 from api.UserManageApi import UserManageApi
-from api.class_managementApi import ClassManageApi
+from api.ClassManagementApi import ClassManageApi
 from testcases.conftest import get_data
 from utils.jsonpath_utils import JsonPathUtils
 

@@ -228,5 +228,59 @@ class_disassociation_teacher:
     phone_two: 15864512548
     teacher_two: 老师二
     class_name: 冰雕班级
+add_group_template:
+  - describe: 分组模板新增
+    class_name: 深圳线下班级
+    template_name: 班级下新增小组模板
+edit_group_template:
+  - describe: 编辑分组模板新增
+    class_name: 深圳线下班级
+    template_name: 班级下新增小组模板
+    edit_template_name: 编辑分组模板
+del_group_template:
+  - describe: 删除分组模板
+    class_name: 深圳线下班级
+    template_name: 班级下新增小组模板
+save_group_template:
+  - describe: 保存分组以及分组成员，小组不添加学生
+    class_name: 深圳线下班级
+    template_name: 班级下新增小组模板
+    group_name: 小组一
+save_group_templates:
+  - describe: 保存分组以及分组成员，小组里添加学生
+    class_name: 新增一班
+    template_name: 班级下新增小组模板
+    phone: 15954854216
+    names: 刘子
+    identities: 7
+    pwd: admin123
+    group_name: 小组二
+group_template_list:
+  - describe: 分组模板列表数据
+    class_name: 深圳线下班级
+    template_name: 班级下新增小组模板
+get_template_info:
+  - describe: 获取模版信息
+    class_name: 深圳线下班级
+    template_name: 班级下新增小组模板
+get_templates_details:
+  - describe: 获取模版详情（携带分组信息）
+    class_name: 新增一班
+    template_name: 班级下新增小组模板
+    phone: 15954854216
+    names: 刘子
+    identities: 7
+    pwd: admin123
+    group_name: 小组二
+del_templates_group_info:
+  - describe: 删除模版中的分组信息
+    class_name: 新增一班
+    template_name: 班级下新增小组模板
+    phone: 15954854216
+    names: 刘子
+    identities: 7
+    pwd: admin123
+    group_name: 小组二
+
 
 
