@@ -281,6 +281,41 @@ del_templates_group_info:
     identities: 7
     pwd: admin123
     group_name: 小组二
+clear_templates_group_info:
+  - describe: 清除模版中的分组信息
+    class_name: 新增一班
+    template_name: 班级下新增小组模板
+    phone: 15954854216
+    names: 刘子
+    identities: 7
+    pwd: admin123
+    group_name: 小组二
+add_user_groups:
+  - describe: 将用户新增到多个分组中
+    class_name: 广州线下班级
+    template_name: 班级下新增小组模板一
+    template_names: 班级下新增小组模板二
+    phone_one: 15954854216
+    name_one: 李飞
+    identities: 7
+    pwd: admin123
+    phone: 15954854215
+    names: 张飞
+    group_name: 小组一
+    group_names: 小组二
+stu_move_in_group:
+  - describe: 分组模板小组学生移动
+    phone: 15954854215
+    name: 张飞
+    identities: 7
+    pwd: admin123
+    phones: 15954854255
+    names: 李飞
+    class_name: 广州线下班级
+    template_name: 班级下新增小组模板一
+    group_name: 小组一
+    group_names: 小组二
+
 
 
 

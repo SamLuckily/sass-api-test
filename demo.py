@@ -115,14 +115,18 @@
 # deact("2024-10-01 12:00:00")  # 假设当前时间小于这个值
 # 如果需要测试当前时间或未来某个时间，请确保你的系统时间设置正确
 
-import requests
-import base64
-import json
+# import requests
+# import base64
+# import json
+#
+#
+# def test_encode():
+#     url = "http://120.79.84.33:9999/demo1.txt"
+#     r = requests.get(url=url)
+#     # res = base64.b64encode(r.content)
+#     res = json.loads(base64.b64decode(r.content))
+#     print(res)
 
-
-def test_encode():
-    url = "http://120.79.84.33:9999/demo1.txt"
-    r = requests.get(url=url)
-    # res = base64.b64encode(r.content)
-    res = json.loads(base64.b64decode(r.content))
-    print(res)
+group_uuids = ["125e8169431c8bda95e3894c2d1ca677", "dc108a00e29b633edbd932a4ee8a5df4"]
+for group_uuid in group_uuids:
+    print(group_uuid)

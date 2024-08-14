@@ -52,6 +52,15 @@ class GroupManageApi(BaseApi):
         }
         return self.send("post", path, json=data)
 
+    def save_group(self, template_uuid, group_name):
+        """保存分组(创建分组)"""
+        path = "backend/grade/group/save"
+        data = {
+            "template_uuid": template_uuid,
+            "group_name": group_name,
+        }
+        return self.send("post", path, json=data)
+
     def group_template_list(self, grade_uuid):
         """分组模板列表数据"""
         path = "backend/grade/group/templates"
@@ -69,7 +78,7 @@ class GroupManageApi(BaseApi):
         return self.send("get", path, params=data)
 
     def get_templates_details(self, uuid):
-        """获取模板详情"""
+        """获取模板详情-携带分组信息"""
         path = "backend/grade/group/detail"
         data = {
             "uuid": uuid
@@ -84,3 +93,38 @@ class GroupManageApi(BaseApi):
         }
         return self.send("post", path, json=data)
 
+    def get_templates_group_info(self):
+        """获取分组的教室信息"""
+        path = "backend/grade/group/classrooms"
+        return self.send("get", path)
+
+    def clear_templates_group_info(self, uuid):
+        """清除模板的分组信息"""
+        path = "backend/grade/group/template-clear"
+        data = {
+            "uuid": uuid
+        }
+        return self.send("post", path, json=data)
+
+    def add_user_groups(self, grade_uuid, group_uuid, user_uuid):
+        """将用户新增到多个分组中"""
+        path = "backend/grade/group/add-user"
+        data = {
+            "grade_uuid": grade_uuid,
+            "group_uuid": group_uuid,
+            "user_uuid": user_uuid
+        }
+        return self.send("post", path, json=data)
+
+    def stu_move_in_group(self, template_uuid, group_uuid, group_name, students):
+        """分组模板小组学生移动"""
+        path = "backend/grade/group/templates-user-save"
+        data = {
+            "template_uuid": template_uuid,
+            "group": [{
+                "group_uuid": group_uuid,
+                "group_name": group_name,
+                "students": students,
+            }]
+        }
+        return self.send("post", path, json=data)
