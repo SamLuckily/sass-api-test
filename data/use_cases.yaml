@@ -315,6 +315,32 @@ stu_move_in_group:
     template_name: 班级下新增小组模板一
     group_name: 小组一
     group_names: 小组二
+live_list:
+  - describe: 直播列表
+    page: 1
+    size: 10
+create_live:
+  - describe: 视频直播创建
+    title: AI机器人直播间
+    start_time: 1725144599
+    end_time: 1725148199
+    speaker_rooms:
+      org_id: 0
+      room_id: 0
+      room_uuid: ""
+      room_name: ""
+      title: ""
+      mac: virtual_classroom_001
+      action: update
+    playback_mode: 0
+    interactive_mode: 0
+    live_mode: 1
+    speaker_room_type: self
+    listener_room_type: none
+    push_source_type: 2
+
+
+
 
 
 

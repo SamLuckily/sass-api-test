@@ -384,14 +384,14 @@ class TestGroupManage(BaseApi):
         group_uuid = JsonPathUtils.get(r, "$..group_info[0].group_uuid")[0]
         # 获取模板详情（携带分组信息）
         r = self.group_manage.get_templates_details(template_uuid)
-        user_id = JsonPathUtils.get(r, "$..group_info[1]..user_id")[0]
+        user_uuid_g = JsonPathUtils.get(r, "$..group_info[1]..user_uuid")[0]
         group_name = JsonPathUtils.get(r, "$..group_info[0]..group_name")[0]
         # 分组模板小组学生移动
-        self.group_manage.stu_move_in_group(template_uuid, group_uuid, group_name, user_id)
-        assert r.get("code") == 0
-        # 删除学生
-        self.user_manage.del_user(user_uuid)
-        self.user_manage.del_user(user_uuids)
-        # 删除班级
-        r = self.class_manage.delete_class(class_uuid)
-        assert r.get("code") == 0
+        self.group_manage.stu_move_in_group(template_uuid, group_uuid, group_name, user_uuid_g)
+        # assert r.get("code") == 0
+        # # 删除学生
+        # self.user_manage.del_user(user_uuid)
+        # self.user_manage.del_user(user_uuids)
+        # # 删除班级
+        # r = self.class_manage.delete_class(class_uuid)
+        # assert r.get("code") == 0

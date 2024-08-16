@@ -124,7 +124,7 @@ class GroupManageApi(BaseApi):
             "group": [{
                 "group_uuid": group_uuid,
                 "group_name": group_name,
-                "students": students,
+                "students": students
             }]
         }
         return self.send("post", path, json=data)

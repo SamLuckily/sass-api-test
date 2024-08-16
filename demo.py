@@ -127,6 +127,50 @@
 #     res = json.loads(base64.b64decode(r.content))
 #     print(res)
 
-group_uuids = ["125e8169431c8bda95e3894c2d1ca677", "dc108a00e29b633edbd932a4ee8a5df4"]
-for group_uuid in group_uuids:
-    print(group_uuid)
+# group_uuids = ["125e8169431c8bda95e3894c2d1ca677", "dc108a00e29b633edbd932a4ee8a5df4"]
+# for group_uuid in group_uuids:
+#     print(group_uuid)
+import json
+
+# speaker_rooms = [{
+#     "org_id": 12,
+#     "room_id": 23,
+#     "room_uuid": 3443,
+#     "room_name": 56889,
+#     "title": 4344,
+#     "mac": 21223222,
+#     "action": 23233
+# }, {
+#     "org_id": 12,
+#     "room_id": 23,
+#     "room_uuid": 3443,
+#     "room_name": 56889,
+#     "title": 4344,
+#     "mac": 21223222,
+#     "action": 23233
+# }
+# ]
+# speaker_rooms_json = json.dumps(speaker_rooms)
+# print(speaker_rooms_json)
+data = {
+    "name": "Alice",
+    "age": 30,
+    "city": "New York"
+}
+
+# 将Python字典序列化为JSON格式的字符串
+# json_str = json.dumps(data)
+# print(json_str)
+# 将数据写入JSON文件
+# with open("data.json", "w") as file:
+#     json.dump(data, file)
+#
+# with open("data.json", "r") as files:
+#     data = json.load(files)
+# print(data)
+
+# json_str = '{"name": "Alice", "age": 30, "city": "New York"}'
+#
+# # 将JSON字符串解码为Python对象
+# Python_obj = json.loads(json_str)
+# print(Python_obj)

@@ -295,6 +295,17 @@ class TestUserManageApi(BaseApi):
         r = self.user_manage.user_info()
         assert r.get("code") == 0
 
+    @allure.story("查询用户自身信息测试用例")
+    @allure.title("查询用户自身信息")
+    @allure.severity("normal")
+    @allure.description("查询用户自身信息")
+    def test_user_person_info(self):
+        r = self.user_manage.user_person_info()
+        assert r.get("code") == 0
+
+
+
+
 
 
 
