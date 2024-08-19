@@ -14,6 +14,17 @@ class UniversalApi(BaseApi):
         }
         return self.send("post", path, files=files)
 
+    def upload_resource_link(self):
+        path = "comm/upload"
+        files = {
+            "upload-file": ("dog.jpeg",
+                            # open(r"E:\python_project\own_project\web_ui\sass_apiauto\files\bowei.jpg", "rb"),
+                            open(r"files/dog.jpeg", "rb"),
+                            "application/octet-stream",
+                            )
+        }
+        return self.send("post", path, files=files)
+
     def upload_resource_live(self):
         path = "comm/upload"
         files = {

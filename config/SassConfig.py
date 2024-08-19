@@ -21,6 +21,11 @@ class SassConfig:
         # return self.config.get("base_url")
         return self.config["base_url"]
 
+    @property  # 方法---》属性：通过添加@property装饰器即可实现
+    def upload_url(self):
+        # return self.config.get("base_url")
+        return self.config["upload_url"]
+
     @property
     def login_type(self):
         return self.config["login_type"]

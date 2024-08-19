@@ -1,5 +1,6 @@
 # 接口自动化测试的基础服务地址抽离
 base_url: "http://api.boweiedu.test/"
+upload_url: "http://asset.boweiedu.test/"
 # 用户登录信息
 login_type: "username"
 username: "15830344889"

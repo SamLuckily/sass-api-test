@@ -159,8 +159,13 @@ data = {
 }
 
 # 将Python字典序列化为JSON格式的字符串
+# print(f"我是python字典：{data}")
 # json_str = json.dumps(data)
-# print(json_str)
+# print(f"我是json格式字符串 + {json_str}")
+
+# json_str = '{"name": "Alice", "age": 30, "city": "New York"}'
+# python_obj = json.loads(json_str)
+# print(python_obj)
 # 将数据写入JSON文件
 # with open("data.json", "w") as file:
 #     json.dump(data, file)
@@ -174,3 +179,6 @@ data = {
 # # 将JSON字符串解码为Python对象
 # Python_obj = json.loads(json_str)
 # print(Python_obj)
+# with open("data.json", "r") as file:
+#     data = json.load(file)
+# print(data)

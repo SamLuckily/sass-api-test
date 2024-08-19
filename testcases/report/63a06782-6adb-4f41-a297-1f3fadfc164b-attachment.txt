@@ -1,0 +1,3 @@
+INFO     utils.log_utils:BaseApi.py:80 发起的请求地址为===========>http://api.boweiedu.test/v2/user/info
+INFO     utils.log_utils:BaseApi.py:82 接口的响应信息为<==========={"code":0,"msg":"success","data":{"uuid":"61cdaa3e7960480f99df634c6ace83b0","user_id":135,"username":"15830344889","org_id":8,"role_id":1,"all_role":[{"role_id":1,"role_name":"管理员"}]},"timestamp":1724069836,"req_id":"870e62d76120ed17c052ab2fb58ae0be"}
+INFO     utils.log_utils:jsonpath_utils.py:11 通过jsonpath获取到的数据为['61cdaa3e7960480f99df634c6ace83b0']
