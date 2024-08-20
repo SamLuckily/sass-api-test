@@ -1,0 +1,2 @@
+[32mINFO    [0m utils.log_utils:BaseApi.py:80 发起的请求地址为===========>http://api.boweiedu.test/v2/user/info
+[32mINFO    [0m utils.log_utils:BaseApi.py:82 接口的响应信息为<==========={"code":0,"msg":"success","data":{"uuid":"61cdaa3e7960480f99df634c6ace83b0","user_id":135,"username":"15830344889","org_id":8,"role_id":1,"all_role":[{"role_id":1,"role_name":"管理员"}]},"timestamp":1724151211,"req_id":"8443615f646aed171268d2331381b260"}

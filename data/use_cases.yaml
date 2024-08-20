@@ -358,6 +358,7 @@ update_live:
     listener_room_type: none
     push_source_type: 2
     title_update: AI机器人直播间编辑
+    interactive_modes: 1
 create_image_text_live:
   - describe: 直播图文创建
     title: AI机器人直播间
@@ -441,6 +442,83 @@ quick_edit:
     push_source_type: 2
     type: 1
     value: 2
+get_all_members:
+  - describe: 获取全部成员
+    title: AI机器人直播间
+    start_time: 1725144599
+    end_time: 1725148199
+    speaker_rooms:
+      org_id: 0
+      room_id: 0
+      room_uuid: ""
+      room_name: ""
+      title: ""
+      mac: virtual_classroom_001
+      action: update
+    playback_mode: 0
+    interactive_mode: 0
+    live_mode: 1
+    speaker_room_type: self
+    listener_room_type: none
+    push_source_type: 2
+    title_update: AI机器人直播间修改
+    interactive_modes: 1
+add_address:
+  - describe: 添加地址
+    title: 国际直播站
+edit_address:
+  - describe: 编辑地址
+    title: 国际直播站
+    titles: 国际直播地址编辑
+address_relocation:
+  - describe: 地址移动
+    title_one: 国际直播基地
+    title_two: 省市直播基地
+    rel: brother
+    loc: after
+idle_speaker:
+  - describe: 空闲主讲教室列表
+    live_mode: 2
+    room_type: self
+idle_listener:
+  - describe: 空闲听课教室列表
+    live_mode: 2
+    room_type: self
+add_classroom:
+  - describe: 添加教室
+    address: 国际直播基地
+    title: 国际英语教室
+    page: 1
+    size: 20
+    status: 0
+edit_classroom:
+  - describe: 编辑教室
+    address: 国际直播基地
+    title: 国际英语教室
+    page: 1
+    size: 20
+    status: 0
+    edit_title: 国际英文教室编辑
+classroom_list:
+  - describe: 教室列表(带设备状态)
+    address: 国际直播基地
+    title: 国际英语教室
+    page: 1
+    size: 20
+    status: 0
+classroom_list_select:
+  - describe: 教室列表(下拉框展示)
+    page: 1
+    size: 10
+classroom_detail:
+  - describe: 教室详情
+    address: 国际直播基地
+    title: 国际英语教室
+    page: 1
+    size: 20
+    status: 0
+
+
 
 
 

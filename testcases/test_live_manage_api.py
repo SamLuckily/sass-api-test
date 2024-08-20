@@ -11,7 +11,7 @@ from utils.jsonpath_utils import JsonPathUtils
 
 
 @allure.feature("直播管理模块")
-class TestLiveManageApiA(BaseApi):
+class TestLiveManageApi(BaseApi):
 
     def setup_class(self):
         self.live_manage = LiveManageApi()
@@ -108,7 +108,7 @@ class TestLiveManageApiA(BaseApi):
                                          data['speaker_rooms']['room_uuid'], data['speaker_rooms']['room_name'],
                                          data['speaker_rooms']['title'], data['speaker_rooms']['mac'],
                                          data['speaker_rooms']['action'],
-                                         data["playback_mode"], data["interactive_mode"], data["live_mode"],
+                                         data["playback_mode"], data["interactive_modes"], data["live_mode"],
                                          data["speaker_room_type"], data["listener_room_type"],
                                          data["push_source_type"], speaker_uuid, resource_uuid)
         assert r.get("code") == 0
