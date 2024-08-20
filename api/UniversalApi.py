@@ -29,8 +29,8 @@ class UniversalApi(BaseApi):
         path = "comm/upload"
         files = {
             "upload-file": ("视频.mp4",
-                            open(r"E:\python_project\own_project\web_ui\sass_apiauto\files\视频.mp4", "rb"),
-                            # open(r"files/视频.mp4", "rb"),
+                            # open(r"E:\python_project\own_project\web_ui\sass_apiauto\files\视频.mp4", "rb"),
+                            open(r"files/视频.mp4", "rb"),
                             "application/octet-stream",
                             )
         }
