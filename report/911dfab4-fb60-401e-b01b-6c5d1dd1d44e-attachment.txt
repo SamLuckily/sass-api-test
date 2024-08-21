@@ -1,5 +1,0 @@
-[32mINFO    [0m utils.log_utils:BaseApi.py:80 发起的请求地址为===========>http://api.boweiedu.test/backend/location/add
-[32mINFO    [0m utils.log_utils:BaseApi.py:82 接口的响应信息为<==========={"code":0,"msg":"success","data":{"uuid":"cd1363d3f219e0a012d30361c65d3b92"},"timestamp":1724151185,"req_id":"a435c5505e6aed173266d233ff5616d0"}
-[32mINFO    [0m utils.log_utils:jsonpath_utils.py:11 通过jsonpath获取到的数据为['cd1363d3f219e0a012d30361c65d3b92']
-[32mINFO    [0m utils.log_utils:BaseApi.py:80 发起的请求地址为===========>http://api.boweiedu.test/backend/location/del
-[32mINFO    [0m utils.log_utils:BaseApi.py:82 接口的响应信息为<==========={"code":0,"msg":"success","data":null,"timestamp":1724151185,"req_id":"fbe5d4525e6aed173366d233ab2e6b7b"}

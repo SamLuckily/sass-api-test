@@ -1,2 +1,0 @@
-[32mINFO    [0m utils.log_utils:BaseApi.py:80 发起的请求地址为===========>http://api.boweiedu.test/backend/classroom/status-count
-[32mINFO    [0m utils.log_utils:BaseApi.py:82 接口的响应信息为<==========={"code":0,"msg":"message","data":{"status0_count":8,"status1_count":0,"status2_count":0,"status3_count":0,"status4_count":8,"status5_count":2},"timestamp":1724151188,"req_id":"7b848fe15e6aed175366d233defddb6a"}

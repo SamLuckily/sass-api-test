@@ -156,3 +156,247 @@ class TestChatRoomManageApi:
         # 删除地址
         r = self.addr_manage.del_address(addr_uuid)
         assert r.get("code") == 0
+
+    @allure.story("保存教室配置信息测试用例")
+    @allure.title("保存教室配置信息")
+    @allure.severity("normal")
+    @allure.description("保存教室配置信息")
+    @pytest.mark.parametrize("data", get_data()["save_classroom_config_info"])
+    def test_save_classroom_config_info(self, data):
+        # 添加地址
+        r = self.addr_manage.add_address(data["address"])
+        addr_uuid = JsonPathUtils.get(r, "$..uuid")[0]
+        assert r.get("code") == 0
+        # 添加教室
+        r = self.classroom_manage.add_classroom(data["title"], addr_uuid)
+        assert r.get("code") == 0
+        # 获取教室列表
+        r = self.classroom_manage.classroom_list(data["page"], data["size"], data["status"], addr_uuid)
+        classroom_uuid = JsonPathUtils.get(r, "$..uuid")[0]
+        assert r.get("code") == 0
+        # 保存教室配置信息接口入参
+        base_conf = {
+            "total_power": 0,
+            "threshold": 250,
+            "controller": "0",
+            "video_width": 1920,
+            "video_height": 1080,
+            "min_code_rate": 4000,
+            "max_code_rate": 6000,
+            "frame_rate": 25,
+            "classroom_ip": ""
+        }
+        cmd_conf = {
+            "current_threshold": "200",
+            "power_off_delay": "10",
+            "power_off_max_delay": "120",
+            "axbox_ip": "192.168.127.1",
+            "axbox_port": "4001",
+            "power_ip": "192.168.0.7",
+            "power_port": "24",
+            "oem_ip": "192.168.127.8",
+            "oem_port": "24",
+            "enable": "1",
+            "device_ctrl_mode": "0",
+            "curtain_ctrl_mode": "1",
+            "lights": None,
+            "airconds": None,
+            "curtains": None,
+            "lights_per_module": "6",
+            "airconds_per_module": "1",
+            "curtains_per_module": "1",
+            "projector_open": "",
+            "projector_close": "",
+            "poweron_time_seq": [{
+                "port": "0",
+                "type": "1",
+                "delay": "0"
+            }, {
+                "port": "1",
+                "type": "1",
+                "delay": "0"
+            }, {
+                "port": "2",
+                "type": "1",
+                "delay": "0"
+            }, {
+                "port": "3",
+                "type": "3",
+                "delay": "0"
+            }, {
+                "port": "4",
+                "type": "1",
+                "delay": "0"
+            }, {
+                "port": "5",
+                "type": "1",
+                "delay": "30"
+            }, {
+                "port": "6",
+                "type": "1",
+                "delay": "0"
+            }, {
+                "port": "7",
+                "type": "1",
+                "delay": "0"
+            }],
+            "poweroff_time_seq": [{
+                "port": "0",
+                "type": "1",
+                "delay": "0"
+            }, {
+                "port": "1",
+                "type": "1",
+                "delay": "0"
+            }, {
+                "port": "2",
+                "type": "1",
+                "delay": "0"
+            }, {
+                "port": "3",
+                "type": "3",
+                "delay": "0"
+            }, {
+                "port": "4",
+                "type": "1",
+                "delay": "10"
+            }, {
+                "port": "5",
+                "type": "1",
+                "delay": "0"
+            }, {
+                "port": "6",
+                "type": "1",
+                "delay": "0"
+            }, {
+                "port": "7",
+                "type": "1",
+                "delay": "0"
+            }]
+        }
+        share_conf = {
+            "share_status": 0
+        }
+        r = self.classroom_manage.save_classroom_config_info(classroom_uuid, base_conf, cmd_conf, share_conf)
+        assert r.get("code") == 0
+        # 删除教室
+        r = self.classroom_manage.del_classroom(classroom_uuid)
+        assert r.get("code") == 0
+        # 删除地址
+        r = self.addr_manage.del_address(addr_uuid)
+        assert r.get("code") == 0
+
+    @allure.story("获取教室配置信息测试用例")
+    @allure.title("获取教室配置信息")
+    @allure.severity("normal")
+    @allure.description("获取教室配置信息")
+    @pytest.mark.parametrize("data", get_data()["get_classroom_config_info"])
+    def test_get_classroom_config_info(self, data):
+        # 添加地址
+        r = self.addr_manage.add_address(data["address"])
+        addr_uuid = JsonPathUtils.get(r, "$..uuid")[0]
+        assert r.get("code") == 0
+        # 添加教室
+        r = self.classroom_manage.add_classroom(data["title"], addr_uuid)
+        assert r.get("code") == 0
+        # 获取教室列表
+        r = self.classroom_manage.classroom_list(data["page"], data["size"], data["status"], addr_uuid)
+        classroom_uuid = JsonPathUtils.get(r, "$..uuid")[0]
+        assert r.get("code") == 0
+        r = self.classroom_manage.get_classroom_config_info(classroom_uuid)
+        assert r.get("code") == 0
+        # 删除教室
+        r = self.classroom_manage.del_classroom(classroom_uuid)
+        assert r.get("code") == 0
+        # 删除地址
+        r = self.addr_manage.del_address(addr_uuid)
+        assert r.get("code") == 0
+
+    @allure.story("教室添加设备测试用例")
+    @allure.title("教室添加设备")
+    @allure.severity("normal")
+    @allure.description("教室添加设备")
+    @pytest.mark.parametrize("data", get_data()["classroom_add_device"])
+    def test_classroom_add_device(self, data):
+        # 添加地址
+        r = self.addr_manage.add_address(data["address"])
+        addr_uuid = JsonPathUtils.get(r, "$..uuid")[0]
+        assert r.get("code") == 0
+        # 添加教室
+        r = self.classroom_manage.add_classroom(data["title"], addr_uuid)
+        assert r.get("code") == 0
+        # 获取教室列表
+        r = self.classroom_manage.classroom_list(data["page"], data["size"], data["status"], addr_uuid)
+        classroom_uuid = JsonPathUtils.get(r, "$..uuid")[0]
+        assert r.get("code") == 0
+        # 教室添加设备
+        r = self.classroom_manage.classroom_add_device(classroom_uuid, data["line"], data["cport"], data["titles"])
+        msg = JsonPathUtils.get(r, "$..msg")[0]
+        assert msg == "没有查询到相关网关，无法添加设备"
+        # 删除教室
+        r = self.classroom_manage.del_classroom(classroom_uuid)
+        assert r.get("code") == 0
+        # 删除地址
+        r = self.addr_manage.del_address(addr_uuid)
+        assert r.get("code") == 0
+
+    @allure.story("获取教室设备类型以及限制数测试用例")
+    @allure.title("获取教室设备类型以及限制数")
+    @allure.severity("normal")
+    @allure.description("获取教室设备类型以及限制数")
+    @pytest.mark.parametrize("data", get_data()["classroom_device_type"])
+    def test_classroom_device_type(self, data):
+        # 添加地址
+        r = self.addr_manage.add_address(data["address"])
+        addr_uuid = JsonPathUtils.get(r, "$..uuid")[0]
+        assert r.get("code") == 0
+        # 添加教室
+        r = self.classroom_manage.add_classroom(data["title"], addr_uuid)
+        assert r.get("code") == 0
+        # 获取教室列表
+        r = self.classroom_manage.classroom_list(data["page"], data["size"], data["status"], addr_uuid)
+        classroom_uuid = JsonPathUtils.get(r, "$..uuid")[0]
+        assert r.get("code") == 0
+        # 获取教室设备类型以及限制数
+        self.classroom_manage.classroom_device_type()
+        # 删除教室
+        r = self.classroom_manage.del_classroom(classroom_uuid)
+        assert r.get("code") == 0
+        # 删除地址
+        r = self.addr_manage.del_address(addr_uuid)
+        assert r.get("code") == 0
+
+    @allure.story("一键开关测试用例")
+    @allure.title("一键开关")
+    @allure.severity("normal")
+    @allure.description("一键开关")
+    @pytest.mark.parametrize("data", get_data()["one_key_switch"])
+    def test_one_key_switch(self, data):
+        # 添加地址
+        r = self.addr_manage.add_address(data["address"])
+        addr_uuid = JsonPathUtils.get(r, "$..uuid")[0]
+        assert r.get("code") == 0
+        # 添加教室
+        r = self.classroom_manage.add_classroom(data["title"], addr_uuid)
+        assert r.get("code") == 0
+        # 获取教室列表
+        r = self.classroom_manage.classroom_list(data["page"], data["size"], data["status"], addr_uuid)
+        classroom_uuid = JsonPathUtils.get(r, "$..uuid")[0]
+        assert r.get("code") == 0
+        # 一键开关
+        r = self.classroom_manage.one_key_switch(data["status"], data["is_all_classroom"], classroom_uuid)
+        assert r.get("msg") == "请绑定网关"
+        # 删除教室
+        r = self.classroom_manage.del_classroom(classroom_uuid)
+        assert r.get("code") == 0
+        # 删除地址
+        r = self.addr_manage.del_address(addr_uuid)
+        assert r.get("code") == 0
+
+    @allure.story("获取设备集控websocket频道号测试用例")
+    @allure.title("获取设备集控websocket频道号")
+    @allure.severity("normal")
+    @allure.description("获取设备集控websocket频道号")
+    def test_get_websocket_channel(self):
+        r = self.classroom_manage.get_websocket_channel()
+        assert r.get("code") == 0

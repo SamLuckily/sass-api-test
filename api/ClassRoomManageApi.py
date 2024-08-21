@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+import json
+
 from api.BaseApi import BaseApi
 
 
@@ -85,3 +87,53 @@ class ClassRoomManageApi(BaseApi):
             "uuid": uuid
         }
         return self.send("get", path, params=data)
+
+    def save_classroom_config_info(self, classroom_uuid, base_conf, cmd_conf, share_conf):
+        """保存教室配置信息"""
+        path = "backend/classroom/save-config"
+        data = {
+            "classroom_uuid": classroom_uuid,
+            "base_conf": base_conf,
+            "cmd_conf": cmd_conf,
+            "share_conf": share_conf
+        }
+        return self.send("post", path, data=json.dumps(data))
+
+    def get_classroom_config_info(self, classroom_uuid):
+        """"获取教室配置信息"""
+        path = "backend/classroom/config"
+        data = {
+            "classroom_uuid": classroom_uuid
+        }
+        return self.send("get", path, params=data)
+
+    def classroom_add_device(self, classroom_uuid, line, cport, title):
+        """教室添加设备"""
+        path = "backend/classroom/device/add"
+        data = {
+            "classroom_uuid": classroom_uuid,
+            "line": line,
+            "cport": cport,
+            "title": title
+        }
+        return self.send("post", path, json=data)
+
+    def classroom_device_type(self):
+        """获取教室设备类型以及限制数"""
+        path = "backend/classroom/device/types"
+        return self.send("get", path)
+
+    def one_key_switch(self, status, is_all_classroom, classroom_uuid):
+        """一键开关"""
+        path = "backend/classroom/one-start"
+        data = {
+            "status": status,
+            "is_all_classroom": is_all_classroom,
+            "classroom_uuid": classroom_uuid
+        }
+        return self.send("post", path, json=data)
+
+    def get_websocket_channel(self):
+        """获取设备集控websocket频道号"""
+        path = "backend/chatroom/channel/get"
+        return self.send("get", path)

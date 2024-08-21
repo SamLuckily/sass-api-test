@@ -517,6 +517,72 @@ classroom_detail:
     page: 1
     size: 20
     status: 0
+save_classroom_config_info:
+  - describe: 保存教室配置信息
+    address: 国际直播基地
+    title: 国际英语教室
+    page: 1
+    size: 20
+    status: 0
+get_classroom_config_info:
+  - describe: 获取教室配置信息
+    address: 国际直播基地
+    title: 国际英语教室
+    page: 1
+    size: 20
+    status: 0
+classroom_add_device:
+  - describe: 教室添加设备
+    address: 国际直播基地
+    title: 国际英语教室
+    page: 1
+    size: 20
+    status: 0
+    line: 1
+    cport: 2
+    titles: 电灯
+classroom_device_type:
+  - describe: 获取教室设备类型以及限制数
+    address: 国际直播基地
+    title: 国际英语教室
+    page: 1
+    size: 20
+    status: 0
+one_key_switch:
+  - describe: 一键开关
+    address: 国际直播基地
+    title: 国际英语教室
+    page: 1
+    size: 20
+    status: 0
+    status_classroom: 1
+    is_all_classroom: 0
+add_profile:
+  - describe: 添加情景模式
+    title: 实训教室
+edit_profile:
+  - describe: 编辑情景模式
+    title: 实训教室
+    edit_title: 实训教室编辑
+edit_time_task:
+  - describe: 编辑定时任务
+    is_global_timing: 1
+    not_global_timing: 0
+    on_type: 1
+    on_status: 1
+    on_device:
+      - 1
+    on_timer: ""
+    lession_on_timer: 5
+    on_week:
+      - 1
+    off_status: 1
+    off_device:
+      - 1
+    off_timer: "15:00"
+    off_week:
+      - 1
+
 
 
 

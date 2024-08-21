@@ -152,11 +152,11 @@ import json
 # ]
 # speaker_rooms_json = json.dumps(speaker_rooms)
 # print(speaker_rooms_json)
-data = {
-    "name": "Alice",
-    "age": 30,
-    "city": "New York"
-}
+# data = {
+#     "name": "Alice",
+#     "age": 30,
+#     "city": "New York"
+# }
 
 # 将Python字典序列化为JSON格式的字符串
 # print(f"我是python字典：{data}")
@@ -182,3 +182,23 @@ data = {
 # with open("data.json", "r") as file:
 #     data = json.load(file)
 # print(data)
+import json
+
+data = {
+    "is_global_timing": 1,
+    "on_type": 1,
+    "on_status": 1,
+    "on_device": [1],
+    "on_timer": "",
+    "lession_on_timer": "10",
+    "on_week": [1],
+    "off_status": 1,
+    "off_device": [1],
+    "off_timer": "14:36",
+    "off_week": [1]
+}
+
+# 将包含数组的参数转换为 JSON 字符串
+# json_data = json.dumps(data)
+
+print(data)
