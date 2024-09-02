@@ -1,0 +1,15 @@
+[32mINFO    [0m utils.log_utils:BaseApi.py:80 发起的请求地址为===========>http://api.boweiedu.test/backend/location/add
+[32mINFO    [0m utils.log_utils:BaseApi.py:82 接口的响应信息为<==========={"code":0,"msg":"success","data":{"uuid":"17093f3be405833677daecff1561f453"},"timestamp":1725274705,"req_id":"c25d5a223468f1172b98085a4c4062a4"}
+[32mINFO    [0m utils.log_utils:jsonpath_utils.py:11 通过jsonpath获取到的数据为['17093f3be405833677daecff1561f453']
+[32mINFO    [0m utils.log_utils:BaseApi.py:80 发起的请求地址为===========>http://api.boweiedu.test/backend/classroom/add
+[32mINFO    [0m utils.log_utils:BaseApi.py:82 接口的响应信息为<==========={"code":0,"msg":"success","data":null,"timestamp":1725274705,"req_id":"e1b06b243468f1172c98085a26ec0917"}
+[32mINFO    [0m utils.log_utils:BaseApi.py:80 发起的请求地址为===========>http://api.boweiedu.test/backend/classroom/lists
+[32mINFO    [0m utils.log_utils:BaseApi.py:82 接口的响应信息为<==========={"code":0,"msg":"message","data":{"list":[{"classroom":{"id":315,"title":"国际英语教室","uuid":"cf706182a177026325c64bd8df652317"},"gateway":{"status":0,"title":""},"lesson":{"flag":""},"live":{"flag":""},"virtual":{"air":[],"curtain":[],"detector":[],"host":[],"light":[]}}],"pagination":{"size":20,"total":1,"pages":1,"page":1}},"timestamp":1725274705,"req_id":"56a06b263468f1172d98085ac3d97536"}
+[32mINFO    [0m utils.log_utils:jsonpath_utils.py:11 通过jsonpath获取到的数据为['cf706182a177026325c64bd8df652317']
+[32mINFO    [0m utils.log_utils:BaseApi.py:80 发起的请求地址为===========>http://api.boweiedu.test/backend/classroom/device/add
+[32mINFO    [0m utils.log_utils:BaseApi.py:82 接口的响应信息为<==========={"code":-1,"msg":"没有查询到相关网关，无法添加设备","data":null,"timestamp":1725274705,"req_id":"d3a68f283468f1172e98085a481f5343"}
+[32mINFO    [0m utils.log_utils:jsonpath_utils.py:11 通过jsonpath获取到的数据为['没有查询到相关网关，无法添加设备']
+[32mINFO    [0m utils.log_utils:BaseApi.py:80 发起的请求地址为===========>http://api.boweiedu.test/backend/classroom/del
+[32mINFO    [0m utils.log_utils:BaseApi.py:82 接口的响应信息为<==========={"code":0,"msg":"success","data":null,"timestamp":1725274705,"req_id":"b5c6c52a3468f1172f98085a12b459d3"}
+[32mINFO    [0m utils.log_utils:BaseApi.py:80 发起的请求地址为===========>http://api.boweiedu.test/backend/location/del
+[32mINFO    [0m utils.log_utils:BaseApi.py:82 接口的响应信息为<==========={"code":0,"msg":"success","data":null,"timestamp":1725274705,"req_id":"5aa7e62c3468f1173098085a8ced8f2f"}

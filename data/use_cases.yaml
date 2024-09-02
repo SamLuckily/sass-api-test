@@ -322,8 +322,6 @@ live_list:
 create_live:
   - describe: 视频直播创建
     title: AI机器人直播间
-    start_time: 1725144599
-    end_time: 1725148199
     speaker_rooms:
       org_id: 0
       room_id: 0
@@ -341,8 +339,6 @@ create_live:
 update_live:
   - describe: 直播编辑
     title: AI机器人直播间
-    start_time: 1725144599
-    end_time: 1725148199
     speaker_rooms:
       org_id: 0
       room_id: 0
@@ -362,8 +358,6 @@ update_live:
 create_image_text_live:
   - describe: 直播图文创建
     title: AI机器人直播间
-    start_time: 1725144599
-    end_time: 1725148199
     speaker_rooms:
       org_id: 0
       room_id: 0
@@ -383,8 +377,6 @@ create_image_text_live:
 del_image_text_live:
   - describe: 直播图文编辑
     title: AI机器人直播间
-    start_time: 1725144599
-    end_time: 1725148199
     speaker_rooms:
       org_id: 0
       room_id: 0
@@ -405,8 +397,6 @@ del_image_text_live:
 get_share_link:
   - describe: 获取分享链接
     title: AI机器人直播间
-    start_time: 1725144599
-    end_time: 1725148199
     speaker_rooms:
       org_id: 0
       room_id: 0
@@ -424,8 +414,6 @@ get_share_link:
 quick_edit:
   - describe: 快速编辑
     title: AI机器人直播间
-    start_time: 1725144599
-    end_time: 1725148199
     speaker_rooms:
       org_id: 0
       room_id: 0
@@ -582,6 +570,47 @@ edit_time_task:
     off_timer: "15:00"
     off_week:
       - 1
+add_registration:
+  - describe: 添加报名
+    class_name: 新增课程
+    publish: publish
+    about: 新增课程描述
+    name_chapter: 章节名称
+    name_lesson: 课时名称
+    view: 20
+    type: course
+edit_registration:
+  - describe: 添加报名
+    class_name: 新增课程
+    publish: publish
+    about: 新增课程描述
+    name_chapter: 章节名称
+    name_lesson: 课时名称
+    view: 20
+    type: course
+detail_registration:
+  - describe: 添加报名
+    class_name: 新增课程
+    publish: publish
+    about: 新增课程描述
+    name_chapter: 章节名称
+    name_lesson: 课时名称
+    view: 20
+    type: course
+export_reg_info:
+  - describe: 添加报名
+    class_name: 新增课程
+    publish: publish
+    about: 新增课程描述
+    name_chapter: 章节名称
+    name_lesson: 课时名称
+    view: 20
+    type: course
+equipment_manage:
+  - describe: 设备列表
+    page: 1
+    size: 10
+
 
 
 

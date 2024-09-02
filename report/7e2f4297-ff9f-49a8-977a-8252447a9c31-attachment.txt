@@ -1,0 +1,2 @@
+[32mINFO    [0m utils.log_utils:BaseApi.py:80 发起的请求地址为===========>http://api.boweiedu.test/backend/scheduled-task/get
+[32mINFO    [0m utils.log_utils:BaseApi.py:82 接口的响应信息为<==========={"code":0,"msg":"success","data":{"is_global_timing":0,"on_type":1,"on_status":1,"on_device":[1],"on_timer":"","lession_on_timer":5,"on_week":[1],"off_status":1,"off_device":[1],"off_timer":"15:00","off_week":[1]},"timestamp":1725274706,"req_id":"2c708c563468f1174398085a7762794a"}

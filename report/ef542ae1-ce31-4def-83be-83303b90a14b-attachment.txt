@@ -1,0 +1,2 @@
+[32mINFO    [0m utils.log_utils:BaseApi.py:80 发起的请求地址为===========>http://api.boweiedu.test/backend/scene-mode/list
+[32mINFO    [0m utils.log_utils:BaseApi.py:82 接口的响应信息为<==========={"code":0,"msg":"success","data":{"list":[{"uuid":"ac83010d8dfa62b05985ebbacff50918","setting":[{"port":1,"value":0},{"port":2,"value":0},{"port":3,"value":0},{"port":4,"value":0}],"title":"八点"}],"pagination":{"size":10,"total":1,"pages":1,"page":1}},"timestamp":1725274706,"req_id":"a2fb75583468f1174498085aeb0a8c0c"}

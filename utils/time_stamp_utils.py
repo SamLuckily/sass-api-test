@@ -8,7 +8,7 @@ class TimeStampUtils:
         """获取当前时间戳"""
         current_time = datetime.datetime.now()
         # 往后推3秒
-        future_time_second = current_time + datetime.timedelta(minutes=1)
+        future_time_second = current_time + datetime.timedelta(minutes=3)
         # 往后推1小时
         future_time_hour = current_time + datetime.timedelta(hours=1)
         # 将future_time转换为时间戳
@@ -17,5 +17,19 @@ class TimeStampUtils:
 
         return future_timestamp_second, future_timestamp_hour
 
-# print(TimeStampUtils.get_current_timestamp()[0])
-# print(TimeStampUtils.get_current_timestamp()[1])
+    @classmethod
+    def get_current_time(cls):
+        """获取当前时间制定格式"""
+        current_time = datetime.datetime.now()
+        # 往后推3秒
+        future_time_second = current_time + datetime.timedelta(seconds=2)
+        # 往后推1小时
+        future_time_hour = current_time + datetime.timedelta(hours=1)
+        # 将future_time转换为时间戳
+        future_timestamp_second = future_time_second.strftime('%Y-%m-%d %H:%M:%S')
+        future_timestamp_hour = future_time_hour.strftime('%Y-%m-%d %H:%M:%S')
+        return future_timestamp_second, future_timestamp_hour
+
+
+# print(TimeStampUtils.get_current_time()[0])
+# print(TimeStampUtils.get_current_time()[1])

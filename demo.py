@@ -184,21 +184,40 @@ import json
 # print(data)
 import json
 
-data = {
-    "is_global_timing": 1,
-    "on_type": 1,
-    "on_status": 1,
-    "on_device": [1],
-    "on_timer": "",
-    "lession_on_timer": "10",
-    "on_week": [1],
-    "off_status": 1,
-    "off_device": [1],
-    "off_timer": "14:36",
-    "off_week": [1]
-}
+# data = {
+#     "is_global_timing": 1,
+#     "on_type": 1,
+#     "on_status": 1,
+#     "on_device": [1],
+#     "on_timer": "",
+#     "lession_on_timer": "10",
+#     "on_week": [1],
+#     "off_status": 1,
+#     "off_device": [1],
+#     "off_timer": "14:36",
+#     "off_week": [1]
+# }
+#
+# # 将包含数组的参数转换为 JSON 字符串
+# # json_data = json.dumps(data)
+#
+# print(data)
+import jsonpath
+import requests
 
-# 将包含数组的参数转换为 JSON 字符串
-# json_data = json.dumps(data)
 
-print(data)
+# def test_login():
+#     headers = {"Content-Type": "application/json"}
+#     data = {
+#         "login_type": "username",
+#         "username": "15830344889",
+#         "password": "admin123"
+#     }
+#     url = "http://api.boweiedu.test/v1/user/login"
+#     r = requests.request("POST", url, headers=headers, json=data)
+#     token = jsonpath.jsonpath(r.json(), "$..token")[0]
+#     uuid = jsonpath.jsonpath(r.json(), "$..user_base.uuid")[0]
+#     return token, uuid
+#
+#
+# print(test_login())

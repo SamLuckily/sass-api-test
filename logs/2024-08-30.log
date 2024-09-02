@@ -1,0 +1,63 @@
+[2024-08-30 08:33:19] [INFO] [BaseApi.py]/[line: 80]/[send] 发起的请求地址为===========>http://api.boweiedu.test/backend/collect/config-list 
+[2024-08-30 08:33:19] [INFO] [BaseApi.py]/[line: 82]/[send] 接口的响应信息为<==========={"code":0,"msg":"success","data":{"list":[],"pagination":{"size":10,"total":0,"pages":0,"page":1}},"timestamp":1724977998,"req_id":"8c154fc8595af01731da055a49b768ca"} 
+[2024-08-30 11:45:37] [INFO] [BaseApi.py]/[line: 80]/[send] 发起的请求地址为===========>http://api.boweiedu.test/backend/collect/config-save 
+[2024-08-30 11:45:37] [INFO] [BaseApi.py]/[line: 82]/[send] 接口的响应信息为<==========={"code":0,"msg":"success","data":[],"timestamp":1724989537,"req_id":"00dd933ad864f01795e0055acb067e04"} 
+[2024-08-30 11:45:37] [INFO] [BaseApi.py]/[line: 80]/[send] 发起的请求地址为===========>http://api.boweiedu.test/backend/collect/config-list 
+[2024-08-30 11:45:37] [INFO] [BaseApi.py]/[line: 82]/[send] 接口的响应信息为<==========={"code":0,"msg":"success","data":{"list":[{"isOption":1,"optionContent":"烹饪;汽修;机电","title":"专业热度","uuid":"6597df64081642b6815647be6be1544c"}],"pagination":{"size":10,"total":1,"pages":0,"page":1}},"timestamp":1724989537,"req_id":"6ed2d83bd864f01796e0055a1742541a"} 
+[2024-08-30 11:45:37] [INFO] [jsonpath_utils.py]/[line: 11]/[get] 通过jsonpath获取到的数据为['6597df64081642b6815647be6be1544c'] 
+[2024-08-30 11:46:48] [INFO] [BaseApi.py]/[line: 80]/[send] 发起的请求地址为===========>http://api.boweiedu.test/backend/collect/config-save 
+[2024-08-30 11:46:48] [INFO] [BaseApi.py]/[line: 82]/[send] 接口的响应信息为<==========={"code":-1,"msg":"配置信息的标题 专业热度已存在，新增失败","data":[],"timestamp":1724989608,"req_id":"8628f5c2e864f01798e0055aa2bb6c56"} 
+[2024-08-30 11:47:36] [INFO] [BaseApi.py]/[line: 80]/[send] 发起的请求地址为===========>http://api.boweiedu.test/backend/collect/config-save 
+[2024-08-30 11:47:36] [INFO] [BaseApi.py]/[line: 82]/[send] 接口的响应信息为<==========={"code":0,"msg":"success","data":[],"timestamp":1724989656,"req_id":"450e7de8f364f017a7e0055a13873442"} 
+[2024-08-30 11:47:36] [INFO] [BaseApi.py]/[line: 80]/[send] 发起的请求地址为===========>http://api.boweiedu.test/backend/collect/config-list 
+[2024-08-30 11:47:36] [INFO] [BaseApi.py]/[line: 82]/[send] 接口的响应信息为<==========={"code":0,"msg":"success","data":{"list":[{"isOption":1,"optionContent":"烹饪;汽修;机电","title":"专业热度","uuid":"1223194951f8c0ae9d99f8db8962e175"}],"pagination":{"size":10,"total":1,"pages":0,"page":1}},"timestamp":1724989656,"req_id":"9dd9f6ebf364f017a8e0055a88b71e15"} 
+[2024-08-30 11:47:36] [INFO] [jsonpath_utils.py]/[line: 11]/[get] 通过jsonpath获取到的数据为['1223194951f8c0ae9d99f8db8962e175'] 
+[2024-08-30 13:50:48] [INFO] [BaseApi.py]/[line: 80]/[send] 发起的请求地址为===========>http://api.boweiedu.test/backend/collect/config-save 
+[2024-08-30 13:50:48] [INFO] [BaseApi.py]/[line: 82]/[send] 接口的响应信息为<==========={"code":0,"msg":"success","data":[],"timestamp":1724997047,"req_id":"f87e33e7ac6bf017cce0055a93a6ea49"} 
+[2024-08-30 13:50:48] [INFO] [BaseApi.py]/[line: 80]/[send] 发起的请求地址为===========>http://api.boweiedu.test/backend/collect/config-list 
+[2024-08-30 13:50:48] [INFO] [BaseApi.py]/[line: 82]/[send] 接口的响应信息为<==========={"code":0,"msg":"success","data":{"list":[{"isOption":1,"optionContent":"睡觉；吃饭；躺平；","title":"我的爱好","uuid":"88d306921ea6457b2aaf186819e9c8ea"}],"pagination":{"size":10,"total":1,"pages":0,"page":1}},"timestamp":1724997047,"req_id":"2d2c72e9ac6bf017cde0055a184bbbac"} 
+[2024-08-30 13:50:48] [INFO] [jsonpath_utils.py]/[line: 11]/[get] 通过jsonpath获取到的数据为['88d306921ea6457b2aaf186819e9c8ea'] 
+[2024-08-30 14:04:04] [INFO] [BaseApi.py]/[line: 80]/[send] 发起的请求地址为===========>http://api.boweiedu.test/backend/collect/config-save 
+[2024-08-30 14:04:04] [INFO] [BaseApi.py]/[line: 82]/[send] 接口的响应信息为<==========={"code":0,"msg":"success","data":[],"timestamp":1724997843,"req_id":"cedab431666cf017e2e0055ad8a8b7aa"} 
+[2024-08-30 14:04:04] [INFO] [BaseApi.py]/[line: 80]/[send] 发起的请求地址为===========>http://api.boweiedu.test/backend/collect/config-list 
+[2024-08-30 14:04:04] [INFO] [BaseApi.py]/[line: 82]/[send] 接口的响应信息为<==========={"code":0,"msg":"success","data":{"list":[{"isOption":1,"optionContent":"睡觉;吃饭;躺平;","title":"我的爱好","uuid":"f07dc6a1834a4e34df3b435117c141a6"}],"pagination":{"size":10,"total":1,"pages":0,"page":1}},"timestamp":1724997843,"req_id":"d27f1634666cf017e3e0055afdcd4e3c"} 
+[2024-08-30 14:04:04] [INFO] [jsonpath_utils.py]/[line: 11]/[get] 通过jsonpath获取到的数据为['f07dc6a1834a4e34df3b435117c141a6'] 
+[2024-08-30 14:04:04] [INFO] [BaseApi.py]/[line: 80]/[send] 发起的请求地址为===========>http://api.boweiedu.test/backend/collect/config-save 
+[2024-08-30 14:04:04] [INFO] [BaseApi.py]/[line: 82]/[send] 接口的响应信息为<==========={"code":-1,"msg":"配置信息的标题 我的爱好已存在，新增失败","data":[],"timestamp":1724997843,"req_id":"44ae1237666cf017e4e0055aa2f34d76"} 
+[2024-08-30 14:06:45] [INFO] [BaseApi.py]/[line: 80]/[send] 发起的请求地址为===========>http://api.boweiedu.test/backend/collect/config-save 
+[2024-08-30 14:06:45] [INFO] [BaseApi.py]/[line: 82]/[send] 接口的响应信息为<==========={"code":0,"msg":"success","data":[],"timestamp":1724998004,"req_id":"aa8b7dcb8b6cf017f7e0055a7d206db9"} 
+[2024-08-30 14:06:45] [INFO] [BaseApi.py]/[line: 80]/[send] 发起的请求地址为===========>http://api.boweiedu.test/backend/collect/config-list 
+[2024-08-30 14:06:45] [INFO] [BaseApi.py]/[line: 82]/[send] 接口的响应信息为<==========={"code":0,"msg":"success","data":{"list":[{"isOption":1,"optionContent":"睡觉;吃饭;躺平;","title":"我的爱好","uuid":"dc78363d510ae355cb6aa757d6f1e284"}],"pagination":{"size":10,"total":1,"pages":0,"page":1}},"timestamp":1724998004,"req_id":"03099acc8b6cf017f8e0055a786a7484"} 
+[2024-08-30 14:06:45] [INFO] [jsonpath_utils.py]/[line: 11]/[get] 通过jsonpath获取到的数据为['dc78363d510ae355cb6aa757d6f1e284'] 
+[2024-08-30 14:06:45] [INFO] [BaseApi.py]/[line: 80]/[send] 发起的请求地址为===========>http://api.boweiedu.test/backend/collect/config-save 
+[2024-08-30 14:06:45] [INFO] [BaseApi.py]/[line: 82]/[send] 接口的响应信息为<==========={"code":-1,"msg":"配置信息的标题 我的爱好已存在，新增失败","data":[],"timestamp":1724998005,"req_id":"ca4a44ce8b6cf017f9e0055a5413f85c"} 
+[2024-08-30 14:16:02] [INFO] [BaseApi.py]/[line: 80]/[send] 发起的请求地址为===========>http://api.boweiedu.test/backend/collect/config-save 
+[2024-08-30 14:16:02] [INFO] [BaseApi.py]/[line: 82]/[send] 接口的响应信息为<==========={"code":0,"msg":"success","data":[],"timestamp":1724998562,"req_id":"576f56820d6df01703e1055a86d81778"} 
+[2024-08-30 14:16:02] [INFO] [BaseApi.py]/[line: 80]/[send] 发起的请求地址为===========>http://api.boweiedu.test/backend/collect/config-list 
+[2024-08-30 14:16:02] [INFO] [BaseApi.py]/[line: 82]/[send] 接口的响应信息为<==========={"code":0,"msg":"success","data":{"list":[{"isOption":1,"optionContent":"睡觉;吃饭;躺平;","title":"我的爱好","uuid":"42629c80ddc13d2b2734174e70fc66f8"}],"pagination":{"size":10,"total":1,"pages":0,"page":1}},"timestamp":1724998562,"req_id":"a191c7840d6df01704e1055a66a37426"} 
+[2024-08-30 14:16:02] [INFO] [jsonpath_utils.py]/[line: 11]/[get] 通过jsonpath获取到的数据为['42629c80ddc13d2b2734174e70fc66f8'] 
+[2024-08-30 14:16:02] [INFO] [BaseApi.py]/[line: 80]/[send] 发起的请求地址为===========>http://api.boweiedu.test/backend/collect/config-save 
+[2024-08-30 14:16:02] [INFO] [BaseApi.py]/[line: 82]/[send] 接口的响应信息为<==========={"code":-1,"msg":"配置信息的标题 我的爱好已存在，新增失败","data":[],"timestamp":1724998562,"req_id":"a574cd850d6df01705e1055a22685097"} 
+[2024-08-30 14:19:33] [INFO] [BaseApi.py]/[line: 80]/[send] 发起的请求地址为===========>http://api.boweiedu.test/backend/collect/config-save 
+[2024-08-30 14:19:33] [INFO] [BaseApi.py]/[line: 82]/[send] 接口的响应信息为<==========={"code":0,"msg":"success","data":[],"timestamp":1724998772,"req_id":"e6aa65883e6df01719e1055ab7b15121"} 
+[2024-08-30 14:19:33] [INFO] [BaseApi.py]/[line: 80]/[send] 发起的请求地址为===========>http://api.boweiedu.test/backend/collect/config-list 
+[2024-08-30 14:19:33] [INFO] [BaseApi.py]/[line: 82]/[send] 接口的响应信息为<==========={"code":0,"msg":"success","data":{"list":[{"isOption":1,"optionContent":"睡觉;吃饭;躺平;","title":"我的爱好","uuid":"8d9dce6c1ff8311a77e22cb770fd2fe5"}],"pagination":{"size":10,"total":1,"pages":0,"page":1}},"timestamp":1724998772,"req_id":"17ea57893e6df0171ae1055aacd81588"} 
+[2024-08-30 14:19:33] [INFO] [jsonpath_utils.py]/[line: 11]/[get] 通过jsonpath获取到的数据为['8d9dce6c1ff8311a77e22cb770fd2fe5'] 
+[2024-08-30 14:19:33] [INFO] [BaseApi.py]/[line: 80]/[send] 发起的请求地址为===========>http://api.boweiedu.test/backend/collect/config-save 
+[2024-08-30 14:19:33] [INFO] [BaseApi.py]/[line: 82]/[send] 接口的响应信息为<==========={"code":-1,"msg":"配置信息的标题 我的爱好已存在，新增失败","data":[],"timestamp":1724998772,"req_id":"72782e8b3e6df0171be1055aafb1b2a0"} 
+[2024-08-30 14:20:58] [INFO] [BaseApi.py]/[line: 80]/[send] 发起的请求地址为===========>http://api.boweiedu.test/backend/collect/config-save 
+[2024-08-30 14:20:58] [INFO] [BaseApi.py]/[line: 82]/[send] 接口的响应信息为<==========={"code":0,"msg":"success","data":[],"timestamp":1724998858,"req_id":"1e08ca70526df01724e1055a80896f31"} 
+[2024-08-30 14:20:58] [INFO] [BaseApi.py]/[line: 80]/[send] 发起的请求地址为===========>http://api.boweiedu.test/backend/collect/config-list 
+[2024-08-30 14:20:58] [INFO] [BaseApi.py]/[line: 82]/[send] 接口的响应信息为<==========={"code":0,"msg":"success","data":{"list":[{"isOption":1,"optionContent":"睡觉;吃饭;躺平;","title":"我的爱好","uuid":"d510bc5bf04c45c5d6b96aa991ae6740"}],"pagination":{"size":10,"total":1,"pages":0,"page":1}},"timestamp":1724998858,"req_id":"cc949e72526df01725e1055a7a36d240"} 
+[2024-08-30 14:20:58] [INFO] [jsonpath_utils.py]/[line: 11]/[get] 通过jsonpath获取到的数据为['d510bc5bf04c45c5d6b96aa991ae6740'] 
+[2024-08-30 14:20:58] [INFO] [BaseApi.py]/[line: 80]/[send] 发起的请求地址为===========>http://api.boweiedu.test/backend/collect/config-save 
+[2024-08-30 14:20:58] [INFO] [BaseApi.py]/[line: 82]/[send] 接口的响应信息为<==========={"code":-1,"msg":"配置信息的标题 我的爱好已存在，新增失败","data":[],"timestamp":1724998858,"req_id":"89206d74526df01726e1055a9e7ff903"} 
+[2024-08-30 14:22:23] [INFO] [BaseApi.py]/[line: 80]/[send] 发起的请求地址为===========>http://api.boweiedu.test/backend/collect/config-save 
+[2024-08-30 14:22:23] [INFO] [BaseApi.py]/[line: 82]/[send] 接口的响应信息为<==========={"code":0,"msg":"success","data":[],"timestamp":1724998942,"req_id":"ad856e17666df0172fe1055aae5a355d"} 
+[2024-08-30 14:22:23] [INFO] [BaseApi.py]/[line: 80]/[send] 发起的请求地址为===========>http://api.boweiedu.test/backend/collect/config-list 
+[2024-08-30 14:22:23] [INFO] [BaseApi.py]/[line: 82]/[send] 接口的响应信息为<==========={"code":0,"msg":"success","data":{"list":[{"isOption":1,"optionContent":"睡觉;吃饭;躺平;","title":"我的爱好","uuid":"67d0fd7c75f39e1f41080d2d91253214"}],"pagination":{"size":10,"total":1,"pages":0,"page":1}},"timestamp":1724998942,"req_id":"1be16818666df01730e1055ae4763b8f"} 
+[2024-08-30 14:22:23] [INFO] [jsonpath_utils.py]/[line: 11]/[get] 通过jsonpath获取到的数据为['67d0fd7c75f39e1f41080d2d91253214'] 
+[2024-08-30 14:22:23] [INFO] [BaseApi.py]/[line: 80]/[send] 发起的请求地址为===========>http://api.boweiedu.test/backend/collect/config-save 
+[2024-08-30 14:22:23] [INFO] [BaseApi.py]/[line: 82]/[send] 接口的响应信息为<==========={"code":0,"msg":"success","data":[],"timestamp":1724998942,"req_id":"4297971a666df01731e1055a94cec8bc"} 
+[2024-08-30 14:30:41] [INFO] [BaseApi.py]/[line: 80]/[send] 发起的请求地址为===========>http://api.boweiedu.test/backend/collect/config-save 
+[2024-08-30 14:30:41] [INFO] [BaseApi.py]/[line: 82]/[send] 接口的响应信息为<==========={"code":-1,"msg":"保存配置信息为空","data":[],"timestamp":1724999440,"req_id":"04bd6900da6df01789e1055a64ef0475"} 

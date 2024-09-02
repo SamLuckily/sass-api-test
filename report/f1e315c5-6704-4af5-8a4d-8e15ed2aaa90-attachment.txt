@@ -1,0 +1,2 @@
+[32mINFO    [0m utils.log_utils:BaseApi.py:80 发起的请求地址为===========>http://api.boweiedu.test/v1/user/save-config
+[32mINFO    [0m utils.log_utils:BaseApi.py:82 接口的响应信息为<==========={"code":0,"msg":"success","data":{"uuid":"2259f39b3bcebc423453b1e86ea39157"},"timestamp":1725274708,"req_id":"2338c6cb3468f1178098085a19908181"}

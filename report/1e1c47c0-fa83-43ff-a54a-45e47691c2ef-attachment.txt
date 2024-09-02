@@ -1,0 +1,2 @@
+[32mINFO    [0m utils.log_utils:BaseApi.py:80 发起的请求地址为===========>http://api.boweiedu.test/backend/chatroom/channel/get
+[32mINFO    [0m utils.log_utils:BaseApi.py:82 接口的响应信息为<==========={"code":0,"msg":"success","data":{"dcc_channel":"Z740hria"},"timestamp":1725274706,"req_id":"383ea2493468f1173e98085a8d279b04"}

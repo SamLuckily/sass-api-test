@@ -8,6 +8,7 @@ from api.UniversalApi import UniversalApi
 from api.UserManageApi import UserManageApi
 from testcases.conftest import get_data
 from utils.jsonpath_utils import JsonPathUtils
+from utils.time_stamp_utils import TimeStampUtils
 
 
 @allure.feature("直播管理模块")
@@ -17,6 +18,7 @@ class TestLiveManageApi(BaseApi):
         self.live_manage = LiveManageApi()
         self.user_manage = UserManageApi()
         self.uni = UniversalApi()
+        self.timestamp = TimeStampUtils()
 
     @allure.story("直播列表测试用例")
     @allure.title("直播列表")
@@ -39,8 +41,11 @@ class TestLiveManageApi(BaseApi):
         # 上传视频文件
         r = self.uni.upload_resource_live()
         resource_uuid = JsonPathUtils.get(r, "$..uuid")[0]
+        # 时间入参
+        start_time = self.timestamp.get_current_timestamp()[0]
+        end_time = self.timestamp.get_current_timestamp()[1]
         # 创建直播
-        r = self.live_manage.live_create(data["title"], data["start_time"], data["end_time"],
+        r = self.live_manage.live_create(data["title"], start_time, end_time,
                                          data['speaker_rooms']['org_id'], data['speaker_rooms']['room_id'],
                                          data['speaker_rooms']['room_uuid'], data['speaker_rooms']['room_name'],
                                          data['speaker_rooms']['title'], data['speaker_rooms']['mac'],
@@ -65,8 +70,11 @@ class TestLiveManageApi(BaseApi):
         # 上传视频文件
         r = self.uni.upload_resource_live()
         resource_uuid = JsonPathUtils.get(r, "$..uuid")[0]
+        # 时间入参
+        start_time = self.timestamp.get_current_timestamp()[0]
+        end_time = self.timestamp.get_current_timestamp()[1]
         # 创建直播
-        r = self.live_manage.live_create(data["title"], data["start_time"], data["end_time"],
+        r = self.live_manage.live_create(data["title"], start_time, end_time,
                                          data['speaker_rooms']['org_id'], data['speaker_rooms']['room_id'],
                                          data['speaker_rooms']['room_uuid'], data['speaker_rooms']['room_name'],
                                          data['speaker_rooms']['title'], data['speaker_rooms']['mac'],
@@ -92,8 +100,11 @@ class TestLiveManageApi(BaseApi):
         # 上传视频文件
         r = self.uni.upload_resource_live()
         resource_uuid = JsonPathUtils.get(r, "$..uuid")[0]
+        # 时间入参
+        start_time = self.timestamp.get_current_timestamp()[0]
+        end_time = self.timestamp.get_current_timestamp()[1]
         # 创建直播
-        r = self.live_manage.live_create(data["title"], data["start_time"], data["end_time"],
+        r = self.live_manage.live_create(data["title"], start_time, end_time,
                                          data['speaker_rooms']['org_id'], data['speaker_rooms']['room_id'],
                                          data['speaker_rooms']['room_uuid'], data['speaker_rooms']['room_name'],
                                          data['speaker_rooms']['title'], data['speaker_rooms']['mac'],
@@ -102,7 +113,7 @@ class TestLiveManageApi(BaseApi):
                                          data["speaker_room_type"], data["listener_room_type"],
                                          data["push_source_type"], speaker_uuid, resource_uuid)
         live_uuid = JsonPathUtils.get(r, "$..uuid")[0]
-        r = self.live_manage.update_live(live_uuid, data["title_update"], data["start_time"], data["end_time"],
+        r = self.live_manage.update_live(live_uuid, data["title_update"], start_time, end_time,
                                          live_uuid,
                                          data['speaker_rooms']['org_id'], data['speaker_rooms']['room_id'],
                                          data['speaker_rooms']['room_uuid'], data['speaker_rooms']['room_name'],
@@ -127,8 +138,11 @@ class TestLiveManageApi(BaseApi):
         # 上传视频文件
         r = self.uni.upload_resource_live()
         resource_uuid = JsonPathUtils.get(r, "$..uuid")[0]
+        # 时间入参
+        start_time = self.timestamp.get_current_timestamp()[0]
+        end_time = self.timestamp.get_current_timestamp()[1]
         # 创建直播
-        r = self.live_manage.live_create(data["title"], data["start_time"], data["end_time"],
+        r = self.live_manage.live_create(data["title"], start_time, end_time,
                                          data['speaker_rooms']['org_id'], data['speaker_rooms']['room_id'],
                                          data['speaker_rooms']['room_uuid'],
                                          data['speaker_rooms']['room_name'],
@@ -159,8 +173,11 @@ class TestLiveManageApi(BaseApi):
         # 上传视频文件
         r = self.uni.upload_resource_live()
         resource_uuid = JsonPathUtils.get(r, "$..uuid")[0]
+        # 时间入参
+        start_time = self.timestamp.get_current_timestamp()[0]
+        end_time = self.timestamp.get_current_timestamp()[1]
         # 创建直播
-        r = self.live_manage.live_create(data["title"], data["start_time"], data["end_time"],
+        r = self.live_manage.live_create(data["title"], start_time, end_time,
                                          data['speaker_rooms']['org_id'], data['speaker_rooms']['room_id'],
                                          data['speaker_rooms']['room_uuid'],
                                          data['speaker_rooms']['room_name'],
@@ -208,8 +225,11 @@ class TestLiveManageApi(BaseApi):
         # 上传视频文件
         r = self.uni.upload_resource_live()
         resource_uuid = JsonPathUtils.get(r, "$..uuid")[0]
+        # 时间入参
+        start_time = self.timestamp.get_current_timestamp()[0]
+        end_time = self.timestamp.get_current_timestamp()[1]
         # 创建直播
-        r = self.live_manage.live_create(data["title"], data["start_time"], data["end_time"],
+        r = self.live_manage.live_create(data["title"], start_time, end_time,
                                          data['speaker_rooms']['org_id'], data['speaker_rooms']['room_id'],
                                          data['speaker_rooms']['room_uuid'], data['speaker_rooms']['room_name'],
                                          data['speaker_rooms']['title'], data['speaker_rooms']['mac'],
@@ -237,8 +257,11 @@ class TestLiveManageApi(BaseApi):
         # 上传视频文件
         r = self.uni.upload_resource_live()
         resource_uuid = JsonPathUtils.get(r, "$..uuid")[0]
+        # 时间入参
+        start_time = self.timestamp.get_current_timestamp()[0]
+        end_time = self.timestamp.get_current_timestamp()[1]
         # 创建直播
-        r = self.live_manage.live_create(data["title"], data["start_time"], data["end_time"],
+        r = self.live_manage.live_create(data["title"], start_time, end_time,
                                          data['speaker_rooms']['org_id'], data['speaker_rooms']['room_id'],
                                          data['speaker_rooms']['room_uuid'], data['speaker_rooms']['room_name'],
                                          data['speaker_rooms']['title'], data['speaker_rooms']['mac'],
